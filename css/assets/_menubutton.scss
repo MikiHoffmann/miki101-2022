@@ -1,0 +1,44 @@
+.menuButton {
+  position: absolute;
+  height: 2em;
+  width: 2.3em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 2200;
+  @media only screen and (min-width: 31.5em) {
+    display: none;
+  }
+}
+.menuBeam {
+  position: absolute;
+  left: 0;
+  height: 0.125em;
+  width: 2.3em;
+  background-color: var(--white);
+  transition: 0.7s;
+}
+.topMenuBeam {
+  top: 0;
+}
+.middleMenuBeam {
+  top: 0.8em;
+}
+.bottomMenuBeam {
+  top: 1.6em;
+}
+.topMenuBeamClose {
+  top: 0.8em;
+  transform: rotate(-135deg);
+  width: 2.5em;
+}
+.middleMenuBeamClose {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+.bottomMenuBeamClose {
+  top: 0.8em;
+  transform: rotate(135deg);
+  width: 2.5em;
+}
