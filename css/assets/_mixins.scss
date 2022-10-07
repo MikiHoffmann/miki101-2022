@@ -1,0 +1,13 @@
+@mixin pagePadding() {
+  padding: 0 1.5rem;
+}
+@mixin sectionPadding() {
+  padding-top: 3.5em;
+}
+@mixin mQuery($breakpoint) {
+  @if $breakpoint == s {
+    @media only screen and (min-width: 31.25em) {
+      @content;
+    }
+  }
+}

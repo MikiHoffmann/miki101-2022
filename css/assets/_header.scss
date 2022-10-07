@@ -1,0 +1,184 @@
+@import "mixins";
+.mainHeader {
+  position: fixed;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: var(--black);
+  z-index: 2000;
+  animation-name: headerStart;
+  animation-duration: 10s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  @keyframes headerStart {
+    0% {
+      height: 100vh;
+    }
+    65% {
+      box-shadow: none;
+    }
+    100% {
+      height: 3em;
+      box-shadow: var(--shadow);
+    }
+  }
+  .mainLogoContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 10em;
+    animation-name: logoContainerStart;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    @keyframes logoContainerStart {
+      0% {
+        top: 5%;
+        right: -30%;
+        opacity: 0;
+        @include mQuery(s) {
+          top: 5%;
+          right: 60%;
+        }
+      }
+      25% {
+        opacity: 1;
+      }
+      50% {
+        top: 40%;
+        right: 30%;
+      }
+      100% {
+        top: 0;
+        right: 0%;
+      }
+    }
+    .mainLogo {
+      position: absolute;
+      margin: auto;
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.5em;
+      z-index: 2010;
+      .mainLogoLetterM,
+      .mainLogoLetterI1,
+      .mainLogoLetterK,
+      .mainLogoLetterI2 {
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        svg {
+          height: 100%;
+          width: auto;
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+      .mainLogoLetterM {
+        animation-name: mGrow;
+        animation-delay: 0.5s;
+      }
+      @keyframes mGrow {
+        0% {
+          height: 70%;
+          color: var(--myRed);
+        }
+        25% {
+          color: var(--myRed);
+        }
+        50% {
+          height: 100%;
+          color: var(--white);
+          opacity: 0.3;
+        }
+        75% {
+          color: var(--myRed);
+        }
+        100% {
+          height: 70%;
+          color: var(--myRed);
+        }
+      }
+      .mainLogoLetterI1 {
+        animation-name: I1Grow;
+        animation-delay: 1s;
+      }
+      @keyframes I1Grow {
+        0% {
+          height: 70%;
+          color: var(--myRed);
+        }
+        25% {
+          color: var(--myRed);
+        }
+        50% {
+          height: 100%;
+          color: var(--white);
+          opacity: 0.3;
+        }
+        75% {
+          color: var(--myRed);
+        }
+        100% {
+          height: 70%;
+          color: var(--myRed);
+        }
+      }
+      .mainLogoLetterK {
+        animation-name: KGrow;
+        animation-delay: 1.5s;
+      }
+      @keyframes KGrow {
+        0% {
+          height: 70%;
+          color: var(--myRed);
+        }
+        25% {
+          color: var(--myRed);
+        }
+        50% {
+          height: 100%;
+          color: var(--white);
+          opacity: 0.3;
+        }
+        75% {
+          color: var(--myRed);
+        }
+        100% {
+          height: 70%;
+          color: var(--myRed);
+        }
+      }
+      .mainLogoLetterI2 {
+        animation-name: I2Grow;
+        animation-delay: 2s;
+      }
+      @keyframes I2Grow {
+        0% {
+          height: 70%;
+          color: var(--myRed);
+        }
+        25% {
+          color: var(--myRed);
+        }
+        50% {
+          height: 100%;
+          color: var(--white);
+          opacity: 0.3;
+        }
+        75% {
+          color: var(--myRed);
+        }
+        100% {
+          height: 70%;
+          color: var(--myRed);
+        }
+      }
+    }
+  }
+}
