@@ -40,18 +40,7 @@
     background-color: transparent;
     opacity: 0;
     z-index: 2010;
-    animation-name: showOverlay;
-    animation-delay: 14s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    @keyframes showOverlay {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+    @include showItem;
     & a {
       display: inline-block;
       margin-right: 0.5em;

@@ -1,3 +1,4 @@
+@import "./mixins";
 .menuButton {
   position: absolute;
   height: 2em;
@@ -8,18 +9,7 @@
   transition: 0.5s;
   opacity: 0;
   z-index: 2200;
-  animation-name: showMenuButton;
-  animation-delay: 14s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  @keyframes showMenuButton {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  @include showItem;
   @media only screen and (min-width: 31.5em) {
     display: none;
   }

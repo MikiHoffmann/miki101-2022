@@ -16,8 +16,8 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--white);
 }
-section {
-    @include sectionPadding;
+main {
+    @include showItem;
 }
 img {
     height: auto;

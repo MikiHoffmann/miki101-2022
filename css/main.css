@@ -18,8 +18,32 @@ body {
   color: var(--white);
 }
 
-section {
-  padding-top: 3.5em;
+main {
+  opacity: 0;
+  -webkit-animation-name: showItem;
+          animation-name: showItem;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes showItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 img {
@@ -423,8 +447,9 @@ p {
     background-color: transparent;
     opacity: 0;
     z-index: 2010;
-    -webkit-animation-name: showOverlay;
-            animation-name: showOverlay;
+    opacity: 0;
+    -webkit-animation-name: showItem;
+            animation-name: showItem;
     -webkit-animation-delay: 14s;
             animation-delay: 14s;
     -webkit-animation-duration: 2s;
@@ -432,7 +457,7 @@ p {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
-  @-webkit-keyframes showOverlay {
+  @-webkit-keyframes showItem {
     0% {
       opacity: 0;
     }
@@ -440,7 +465,7 @@ p {
       opacity: 1;
     }
   }
-  @keyframes showOverlay {
+  @keyframes showItem {
     0% {
       opacity: 0;
     }
@@ -473,8 +498,9 @@ p {
   transition: 0.5s;
   opacity: 0;
   z-index: 2200;
-  -webkit-animation-name: showMenuButton;
-          animation-name: showMenuButton;
+  opacity: 0;
+  -webkit-animation-name: showItem;
+          animation-name: showItem;
   -webkit-animation-delay: 14s;
           animation-delay: 14s;
   -webkit-animation-duration: 2s;
@@ -482,15 +508,7 @@ p {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-@-webkit-keyframes showMenuButton {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes showMenuButton {
+@keyframes showItem {
   0% {
     opacity: 0;
   }
@@ -540,4 +558,14 @@ p {
   top: 0.8em;
   transform: rotate(135deg);
   width: 2.5em;
+}
+
+.parallaxOne {
+  display: block;
+  background-image: url(../../img/sky.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

@@ -11,3 +11,18 @@
     }
   }
 }
+@mixin showItem() {
+  opacity: 0;
+  animation-name: showItem;
+  animation-delay: 14s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  @keyframes showItem {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
