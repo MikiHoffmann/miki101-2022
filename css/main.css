@@ -202,7 +202,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -223,7 +223,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -250,7 +250,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -271,7 +271,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -298,7 +298,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -319,7 +319,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -346,7 +346,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -367,7 +367,7 @@ p {
   50% {
     height: 100%;
     color: var(--white);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   75% {
     color: var(--myRed);
@@ -393,6 +393,7 @@ p {
 .menuOverlay {
   position: fixed;
   left: 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -400,21 +401,8 @@ p {
   background-color: green;
   overflow: hidden;
   transition: 0.6s;
+  opacity: 0;
   z-index: 1900;
-}
-@media only screen and (min-width: 31.25em) {
-  .menuOverlay {
-    padding: 0 1.5rem;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 3em;
-    background-color: transparent;
-    z-index: 2010;
-  }
-  .menuOverlay a {
-    margin-right: 0.5em;
-    padding: 0.5em 0;
-  }
 }
 
 .menuOverlayHide {
@@ -426,8 +414,44 @@ p {
 }
 @media only screen and (min-width: 31.25em) {
   .menuOverlayHide {
-    width: 100%;
-    opacity: 1;
+    padding: 0 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3em;
+    width: 100vw;
+    background-color: transparent;
+    opacity: 0;
+    z-index: 2010;
+    -webkit-animation-name: showOverlay;
+            animation-name: showOverlay;
+    -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes showOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes showOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .menuOverlayHide a {
+    display: inline-block;
+    margin-right: 0.5em;
+    font-size: 1.2em;
   }
 }
 
@@ -451,8 +475,8 @@ p {
   z-index: 2200;
   -webkit-animation-name: showMenuButton;
           animation-name: showMenuButton;
-  -webkit-animation-delay: 15s;
-          animation-delay: 15s;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
