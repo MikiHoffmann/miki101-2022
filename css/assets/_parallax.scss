@@ -1,9 +1,15 @@
 .parallaxOne {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-image: url(../../img/sky.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 97vh;
+    max-width: 100%;
+    div {
+        @include pagePadding;
+    }
 }

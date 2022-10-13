@@ -28,6 +28,7 @@ main {
           animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  overflow-x: hidden;
 }
 @-webkit-keyframes showItem {
   0% {
@@ -446,7 +447,7 @@ p {
     width: 100vw;
     background-color: transparent;
     opacity: 0;
-    z-index: 2010;
+    z-index: 2030;
     opacity: 0;
     -webkit-animation-name: showItem;
             animation-name: showItem;
@@ -486,6 +487,10 @@ p {
 }
 .menuOverlayShow a {
   padding: 0.5em 0;
+}
+
+.active {
+  color: var(--myRed);
 }
 
 .menuButton {
@@ -561,11 +566,17 @@ p {
 }
 
 .parallaxOne {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-image: url(../../img/sky.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  height: 97vh;
+  max-width: 100%;
+}
+.parallaxOne div {
+  padding: 0 1.5rem;
 }/*# sourceMappingURL=main.css.map */

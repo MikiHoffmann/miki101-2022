@@ -22,12 +22,10 @@ window.addEventListener('DOMContentLoaded', () => {
       const id = entry.target.getAttribute('id');
       // if in view
       if (entry.intersectionRatio > 0) {
-        document.querySelector(`#navMobile a[href="#${id}"]`).classList.add('active');
-        document.querySelector(`#navPC a[href="#${id}"]`).classList.add('active');
+        document.querySelector(`#menuOverlay a[href="#${id}"]`).classList.add('active');
         // if out of view
       } else {
-        document.querySelector(`#navMobile a[href="#${id}"]`).classList.remove('active');
-        document.querySelector(`#navPC a[href="#${id}"]`).classList.remove('active');
+        document.querySelector(`#menuOverlay a[href="#${id}"]`).classList.remove('active');
       }
     });
   });
