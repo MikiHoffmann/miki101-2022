@@ -2,7 +2,7 @@
   padding: 0 1.5rem;
 }
 @mixin sectionPadding() {
-  padding-top: 3.5em;
+  padding-top: 3em;
 }
 @mixin mQuery($breakpoint) {
   @if $breakpoint == s {

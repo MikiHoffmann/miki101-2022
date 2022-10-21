@@ -47,6 +47,10 @@ main {
   }
 }
 
+section {
+  padding-top: 3em;
+}
+
 img {
   height: auto;
   width: 100%;
@@ -66,9 +70,95 @@ p {
 
 :root {
   --black: rgb(0, 0, 0);
+  --blackSemiTrans: rgba(0,0,0,0.8);
+  --blackTrans: rgba(0,0,0,0.6);
   --white: rgb(255, 255, 255);
   --shadow: 2px 2px 50px rgb(255, 255, 255);
   --myRed: rgb(230, 53, 53);
+}
+
+.pageblocker {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  overflow: hidden;
+  z-index: 2100;
+  -webkit-animation-name: unblock;
+          animation-name: unblock;
+  -webkit-animation-duration: 5.5s;
+          animation-duration: 5.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.pageblocker span {
+  height: 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 6vw;
+  -webkit-animation-name: welcomeText;
+          animation-name: welcomeText;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes welcomeText {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes welcomeText {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes unblock {
+  0% {
+    display: block;
+  }
+  85% {
+    width: 100%;
+  }
+  100% {
+    display: none;
+    width: 0;
+  }
+}
+@keyframes unblock {
+  0% {
+    display: block;
+  }
+  85% {
+    width: 100%;
+  }
+  100% {
+    display: none;
+    width: 0;
+  }
 }
 
 .mainHeader {
@@ -78,7 +168,7 @@ p {
   justify-content: center;
   width: 100vw;
   background-color: var(--black);
-  z-index: 2000;
+  z-index: 2050;
   -webkit-animation-name: headerStart;
           animation-name: headerStart;
   -webkit-animation-duration: 10s;
@@ -91,25 +181,33 @@ p {
 @-webkit-keyframes headerStart {
   0% {
     height: 100vh;
+    background-color: var(--black);
   }
   65% {
     box-shadow: none;
+    background-color: var(--black);
+    z-index: 2050;
   }
   100% {
     height: 3em;
     box-shadow: var(--shadow);
+    z-index: 2030;
   }
 }
 @keyframes headerStart {
   0% {
     height: 100vh;
+    background-color: var(--black);
   }
   65% {
     box-shadow: none;
+    background-color: var(--black);
+    z-index: 2050;
   }
   100% {
     height: 3em;
     box-shadow: var(--shadow);
+    z-index: 2030;
   }
 }
 .mainHeader .mainLogoContainer {
@@ -412,7 +510,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  z-index: 2020;
+  background-color: transparent;
+  z-index: 2030;
 }
 
 .menuOverlay {
@@ -423,10 +522,9 @@ p {
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
-  background-color: green;
+  background-color: var(--blackSemiTrans);
   overflow: hidden;
   transition: 0.6s;
-  opacity: 0;
   z-index: 1900;
 }
 @media only screen and (min-width: 31.25em) {
@@ -441,6 +539,8 @@ p {
 }
 .menuOverlayHide a {
   padding: 0;
+  font-size: 8vw;
+  transition: 0.3s;
 }
 @media only screen and (min-width: 31.25em) {
   .menuOverlayHide {
@@ -451,33 +551,8 @@ p {
     height: 3em;
     width: 100vw;
     background-color: transparent;
-    opacity: 0;
+    opacity: 1;
     z-index: 2030;
-    opacity: 0;
-    -webkit-animation-name: showItem;
-            animation-name: showItem;
-    -webkit-animation-delay: 14s;
-            animation-delay: 14s;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes showItem {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes showItem {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
   .menuOverlayHide a {
     display: inline-block;
@@ -506,25 +581,7 @@ p {
   border: none;
   cursor: pointer;
   transition: 0.5s;
-  opacity: 0;
-  z-index: 2200;
-  opacity: 0;
-  -webkit-animation-name: showItem;
-          animation-name: showItem;
-  -webkit-animation-delay: 14s;
-          animation-delay: 14s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@keyframes showItem {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  z-index: 2300;
 }
 @media only screen and (min-width: 31.5em) {
   .menuButton {
@@ -582,4 +639,7 @@ p {
   background-size: cover;
   height: 100vh;
   max-width: 100%;
+}
+.parallaxOne .parallaxArticle {
+  background-color: var(--blackTrans);
 }/*# sourceMappingURL=main.css.map */

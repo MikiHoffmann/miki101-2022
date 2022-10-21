@@ -20,6 +20,9 @@ main {
     @include showItem;
     overflow-x: hidden;
 }
+section {
+    @include sectionPadding;
+}
 img {
     height: auto;
     width: 100%;
