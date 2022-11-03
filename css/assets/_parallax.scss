@@ -1,5 +1,5 @@
 .parallaxOne {
-    @include pagePadding;
+    //@include pagePadding;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -12,5 +12,6 @@
     max-width: 100%;
     .parallaxArticle {
         background-color: var(--blackTrans);
+        border-radius: 8px;
     }
 }

@@ -631,7 +631,6 @@ p {
 }
 
 .parallaxOne {
-  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -645,4 +644,5 @@ p {
 }
 .parallaxOne .parallaxArticle {
   background-color: var(--blackTrans);
+  border-radius: 8px;
 }/*# sourceMappingURL=main.css.map */
