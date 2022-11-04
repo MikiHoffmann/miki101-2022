@@ -36,4 +36,7 @@ p {
     margin: 1.5em 0;
     @include pagePadding;
     font-size: 1.2rem;
+    @include mQuery(s) {
+        font-size: 2rem;
+    }
 }

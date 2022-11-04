@@ -67,6 +67,11 @@ p {
   padding: 0 1.5rem;
   font-size: 1.2rem;
 }
+@media only screen and (min-width: 31.25em) {
+  p {
+    font-size: 2rem;
+  }
+}
 
 :root {
   --black: rgb(0, 0, 0);
@@ -639,7 +644,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   max-width: 100%;
 }
 .parallaxOne .parallaxArticle {
