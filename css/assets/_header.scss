@@ -11,7 +11,7 @@
   overflow: hidden;
   z-index: 2100;
   animation-name: unblock;
-  animation-duration: 5.5s;
+  animation-duration: 5.4s;
   animation-fill-mode: forwards;
   span {
     height: 2em;
@@ -57,7 +57,7 @@
   background-color: var(--black);
   z-index: 2050;
   animation-name: headerStart;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-delay: 5s;
   animation-fill-mode: forwards;
   @keyframes headerStart {
@@ -65,7 +65,7 @@
       height: 100vh;
       background-color: var(--black);
     }
-    65% {
+    70% {
       box-shadow: none;
       z-index: 2050;
     }
@@ -82,7 +82,7 @@
     height: 100%;
     width: 8em;
     animation-name: logoContainerStart;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-delay: 5s;
     animation-fill-mode: forwards;
     @include mQuery(s) {
@@ -124,6 +124,7 @@
       .mainLogoLetterI1,
       .mainLogoLetterK,
       .mainLogoLetterI2 {
+        animation-name: letterGrow;
         animation-duration: 4s;
         animation-iteration-count: infinite;
         svg {
@@ -135,91 +136,24 @@
         }
       }
       .mainLogoLetterM {
-        animation-name: mGrow;
         animation-delay: 0.5s;
       }
-      @keyframes mGrow {
-        0% {
-          height: 70%;
-          color: var(--myRed);
-        }
-        25% {
-          color: var(--myRed);
-        }
-        50% {
-          height: 100%;
-          color: var(--white);
-          opacity: 0.5;
-        }
-        75% {
-          color: var(--myRed);
-        }
-        100% {
-          height: 70%;
-          color: var(--myRed);
-        }
-      }
       .mainLogoLetterI1 {
-        animation-name: I1Grow;
         animation-delay: 1s;
       }
-      @keyframes I1Grow {
-        0% {
-          height: 70%;
-          color: var(--myRed);
-        }
-        25% {
-          color: var(--myRed);
-        }
-        50% {
-          height: 100%;
-          color: var(--white);
-          opacity: 0.5;
-        }
-        75% {
-          color: var(--myRed);
-        }
-        100% {
-          height: 70%;
-          color: var(--myRed);
-        }
-      }
       .mainLogoLetterK {
-        animation-name: KGrow;
         animation-delay: 1.5s;
       }
-      @keyframes KGrow {
-        0% {
-          height: 70%;
-          color: var(--myRed);
-        }
-        25% {
-          color: var(--myRed);
-        }
-        50% {
-          height: 100%;
-          color: var(--white);
-          opacity: 0.5;
-        }
-        75% {
-          color: var(--myRed);
-        }
-        100% {
-          height: 70%;
-          color: var(--myRed);
-        }
-      }
       .mainLogoLetterI2 {
-        animation-name: I2Grow;
         animation-delay: 2s;
       }
-      @keyframes I2Grow {
+      @keyframes letterGrow {
         0% {
           height: 70%;
-          color: var(--myRed);
+          color: var(--myBlue);
         }
         25% {
-          color: var(--myRed);
+          color: var(--myBlue);
         }
         50% {
           height: 100%;
@@ -227,13 +161,14 @@
           opacity: 0.5;
         }
         75% {
-          color: var(--myRed);
+          color: var(--myBlue);
         }
         100% {
           height: 70%;
-          color: var(--myRed);
+          color: var(--myBlue);
         }
       }
+      
     }
   }
 }
