@@ -10,6 +10,19 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 16px;
+  background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--myBlue);
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--myBlue);
+}
+
 body {
   height: 100vh;
   width: 100%;
@@ -49,11 +62,26 @@ main {
 
 section {
   padding-top: 3em;
+  min-height: 100vh;
+}
+
+.color {
+  color: var(--myBlue);
 }
 
 img {
   height: auto;
   width: 100%;
+}
+
+h2 {
+  padding: 0 1.5rem;
+  padding-top: 2.5em;
+}
+@media only screen and (min-width: 31.25em) {
+  h2 {
+    padding: 0 3rem;
+  }
 }
 
 a {
@@ -66,6 +94,11 @@ p {
   margin: 1.5em 0;
   padding: 0 1.5rem;
   font-size: 1.2rem;
+}
+@media only screen and (min-width: 31.25em) {
+  p {
+    padding: 0 3rem;
+  }
 }
 @media only screen and (min-width: 31.25em) {
   p {
@@ -168,6 +201,7 @@ p {
 }
 
 .mainHeader {
+  padding: 0 1.5rem;
   position: fixed;
   top: 0;
   display: inline-flex;
@@ -184,6 +218,11 @@ p {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+@media only screen and (min-width: 31.25em) {
+  .mainHeader {
+    padding: 0 3rem;
+  }
+}
 @-webkit-keyframes headerStart {
   0% {
     height: 100vh;
@@ -194,6 +233,7 @@ p {
     z-index: 2050;
   }
   100% {
+    justify-content: flex-end;
     height: 3em;
     box-shadow: var(--shadow);
     z-index: 2030;
@@ -209,6 +249,7 @@ p {
     z-index: 2050;
   }
   100% {
+    justify-content: flex-end;
     height: 3em;
     box-shadow: var(--shadow);
     z-index: 2030;
@@ -390,6 +431,11 @@ p {
   background-color: transparent;
   z-index: 2030;
 }
+@media only screen and (min-width: 31.25em) {
+  .navBar {
+    padding: 0 3rem;
+  }
+}
 
 .menuOverlay {
   position: fixed;
@@ -431,6 +477,13 @@ p {
     opacity: 1;
     z-index: 2030;
   }
+}
+@media only screen and (min-width: 31.25em) and (min-width: 31.25em) {
+  .menuOverlayHide {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 31.25em) {
   .menuOverlayHide a {
     display: inline-block;
     margin-right: 0.5em;
@@ -505,6 +558,7 @@ p {
 }
 
 .parallaxOne {
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -515,6 +569,11 @@ p {
   background-size: cover;
   height: 100vh;
   max-width: 100%;
+}
+@media only screen and (min-width: 31.25em) {
+  .parallaxOne {
+    padding: 0 3rem;
+  }
 }
 .parallaxOne .parallaxArticle {
   background-color: var(--blackTrans);

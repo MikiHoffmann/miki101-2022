@@ -9,6 +9,16 @@ html {
     width: 100%;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+    width: 16px;
+    background-color: var(--black)
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--myBlue);
+}
+::-webkit-scrollbar-button {
+    background-color: var(--myBlue);
+}
 body {
     height: 100vh;
     width: 100%;
@@ -22,10 +32,18 @@ main {
 }
 section {
     @include sectionPadding;
+    min-height: 100vh;
+}
+.color {
+    color: var(--myBlue);
 }
 img {
     height: auto;
     width: 100%;
+}
+h2 {
+    @include pagePadding;
+    padding-top: 2.5em;
 }
 a {
     text-decoration: none;

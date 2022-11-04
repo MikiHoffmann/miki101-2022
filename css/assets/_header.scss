@@ -49,6 +49,7 @@
   }
 }
 .mainHeader {
+  @include pagePadding;
   position: fixed;
   top: 0;
   display: inline-flex;
@@ -70,6 +71,7 @@
       z-index: 2050;
     }
     100% {
+      justify-content: flex-end;
       height: 3em;
       box-shadow: var(--shadow);
       z-index: 2030;

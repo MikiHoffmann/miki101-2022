@@ -1,5 +1,8 @@
 @mixin pagePadding() {
   padding: 0 1.5rem;
+  @include mQuery(s) {
+    padding: 0 3rem;
+  }
 }
 @mixin sectionPadding() {
   padding-top: 3em;
