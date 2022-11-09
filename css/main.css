@@ -26,9 +26,9 @@ html {
 body {
   height: 100vh;
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--white);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: var(--white);
+  color: var(--black);
 }
 
 main {
@@ -114,6 +114,7 @@ p {
   --shadow: 2px 2px 50px rgb(255, 255, 255);
   --myRed: rgb(230, 53, 53);
   --myBlue: rgb(49, 49, 248);
+  --mint: rgb(157, 221, 157);
 }
 
 .pageblocker {
@@ -124,7 +125,7 @@ p {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: var(--black);
+  background-color: transparent;
   overflow: hidden;
   z-index: 2100;
   -webkit-animation-name: unblock;
@@ -207,14 +208,14 @@ p {
   display: inline-flex;
   justify-content: center;
   width: 100vw;
-  background-color: var(--black);
+  background-color: var(--white);
   z-index: 2050;
   -webkit-animation-name: headerStart;
           animation-name: headerStart;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -226,7 +227,7 @@ p {
 @-webkit-keyframes headerStart {
   0% {
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--white);
   }
   70% {
     box-shadow: none;
@@ -242,7 +243,7 @@ p {
 @keyframes headerStart {
   0% {
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--white);
   }
   70% {
     box-shadow: none;
@@ -261,12 +262,13 @@ p {
   justify-content: center;
   height: 100%;
   width: 8em;
+  opacity: 0;
   -webkit-animation-name: logoContainerStart;
           animation-name: logoContainerStart;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -293,10 +295,12 @@ p {
   50% {
     top: 40%;
     right: 30%;
+    opacity: 1;
   }
   100% {
     top: 0;
     right: 0;
+    opacity: 1;
   }
 }
 @keyframes logoContainerStart {
@@ -317,10 +321,12 @@ p {
   50% {
     top: 40%;
     right: 30%;
+    opacity: 1;
   }
   100% {
     top: 0;
     right: 0;
+    opacity: 1;
   }
 }
 .mainHeader .mainLogoContainer .mainLogo {
@@ -386,7 +392,7 @@ p {
   }
   50% {
     height: 100%;
-    color: var(--white);
+    color: var(--mint);
     opacity: 0.5;
   }
   75% {
@@ -407,7 +413,7 @@ p {
   }
   50% {
     height: 100%;
-    color: var(--white);
+    color: var(--mint);
     opacity: 0.5;
   }
   75% {

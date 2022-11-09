@@ -22,9 +22,9 @@ html {
 body {
     height: 100vh;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--white);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--white);
+    color: var(--black);
 }
 main {
     @include showItem;
