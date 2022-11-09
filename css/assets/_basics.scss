@@ -33,6 +33,7 @@ main {
 section {
     @include sectionPadding;
     min-height: 100vh;
+    margin-bottom: 1em;
 }
 .color {
     color: var(--myBlue);
@@ -43,7 +44,7 @@ img {
 }
 h2 {
     @include pagePadding;
-    padding-top: 2.5em;
+    margin-top: 3em;
 }
 a {
     text-decoration: none;
