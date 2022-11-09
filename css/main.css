@@ -111,7 +111,8 @@ p {
   --blackSemiTrans: rgba(0,0,0,0.8);
   --blackTrans: rgba(0,0,0,0.6);
   --white: rgb(255, 255, 255);
-  --shadow: 2px 2px 50px rgb(255, 255, 255);
+  --whiteShadow: 2px 2px 50px rgb(255, 255, 255);
+  --mintShadow: 2px 2px 70px rgb(157, 221, 157);
   --myRed: rgb(230, 53, 53);
   --myBlue: rgb(49, 49, 248);
   --mint: rgb(157, 221, 157);
@@ -249,7 +250,7 @@ p {
     justify-content: flex-end;
     height: 3em;
     background-color: var(--white);
-    box-shadow: var(--shadow);
+    box-shadow: var(--mintShadow);
     z-index: 2030;
   }
 }
@@ -269,7 +270,7 @@ p {
     justify-content: flex-end;
     height: 3em;
     background-color: var(--white);
-    box-shadow: var(--shadow);
+    box-shadow: var(--mintShadow);
     z-index: 2030;
   }
 }
