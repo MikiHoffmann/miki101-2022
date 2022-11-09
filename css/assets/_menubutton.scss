@@ -17,8 +17,8 @@
   left: 0;
   height: 0.125em;
   width: 2.3em;
-  background-color: var(--white);
-  transition: 0.7s;
+  background-color: var(--myBlue);
+  transition: 0.5s;
 }
 .topMenuBeam {
   top: 0;
@@ -33,6 +33,7 @@
   top: 0.8em;
   transform: rotate(-135deg);
   width: 2.5em;
+  background-color: var(--mint);
 }
 .middleMenuBeamClose {
   opacity: 0;
@@ -42,4 +43,5 @@
   top: 0.8em;
   transform: rotate(135deg);
   width: 2.5em;
+  background-color: var(--mint);
 }

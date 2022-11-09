@@ -7,24 +7,25 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--white);
   overflow: hidden;
   z-index: 2100;
   animation-name: unblock;
-  animation-duration: 5.4s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
   span {
     height: 2em;
     width: fit-content;
     font-size: 6vw;
     animation-name: welcomeText;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
+    transition: .5s;
     @keyframes welcomeText {
       0% {
         opacity: 0;
       }
-      40% {
+      30% {
         opacity: 1;
       }
       80% {
@@ -41,6 +42,10 @@
     }
     85% {
       width: 100%;
+      opacity: 1;
+    }
+    95% {
+      opacity: 0;
     }
     100% {
       display: none;
@@ -55,24 +60,28 @@
   display: inline-flex;
   justify-content: center;
   width: 100vw;
-  background-color: var(--white);
-  z-index: 2050;
+  background-color: transparent;
+  z-index: 2200;
   animation-name: headerStart;
-  animation-duration: 6s;
+  animation-duration: 4.2s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   @keyframes headerStart {
     0% {
       height: 100vh;
+      background-color: transparent;
+    }
+    40% {
       background-color: var(--white);
     }
     70% {
       box-shadow: none;
-      z-index: 2050;
+      z-index: 2200;
     }
     100% {
       justify-content: flex-end;
       height: 3em;
+      background-color: var(--white);
       box-shadow: var(--shadow);
       z-index: 2030;
     }
@@ -85,7 +94,7 @@
     width: 8em;
     opacity: 0;
     animation-name: logoContainerStart;
-    animation-duration: 6s;
+    animation-duration: 3.3s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
     @include mQuery(s) {
@@ -101,13 +110,16 @@
           right: 80%;
         }
       }
-      25% {
+      20% {
         opacity: 1;
       }
       50% {
         top: 40%;
-        right: 30%;
+        right: 50%;
         opacity: 1;
+        @include mQuery(s) {
+          right: 30%;
+        }
       }
       100% {
         top: 0;

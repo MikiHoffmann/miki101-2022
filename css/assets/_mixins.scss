@@ -17,7 +17,7 @@
 @mixin showItem() {
   opacity: 0;
   animation-name: showItem;
-  animation-delay: 12s;
+  animation-delay: 3.4s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   @keyframes showItem {

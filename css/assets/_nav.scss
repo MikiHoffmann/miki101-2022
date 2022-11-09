@@ -21,10 +21,10 @@
   height: 100vh;
   background-color: var(--blackSemiTrans);
   overflow: hidden;
-  transition: 0.6s;
+  transition: 0.5s;
   z-index: 1900;
   @include mQuery(s) {
-    z-index: 2300;
+    z-index: 2030;
   }
 }
 .menuOverlayHide {
@@ -60,5 +60,5 @@
   }
 }
 .active {
-  color: var(--myRed);
+  color: var(--myBlue);
 }

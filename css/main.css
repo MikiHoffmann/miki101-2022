@@ -35,8 +35,8 @@ main {
   opacity: 0;
   -webkit-animation-name: showItem;
           animation-name: showItem;
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -86,7 +86,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--mint);
   cursor: pointer;
 }
 
@@ -125,13 +125,13 @@ p {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--white);
   overflow: hidden;
   z-index: 2100;
   -webkit-animation-name: unblock;
           animation-name: unblock;
-  -webkit-animation-duration: 5.4s;
-          animation-duration: 5.4s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -143,16 +143,17 @@ p {
   font-size: 6vw;
   -webkit-animation-name: welcomeText;
           animation-name: welcomeText;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  transition: 0.5s;
 }
 @-webkit-keyframes welcomeText {
   0% {
     opacity: 0;
   }
-  40% {
+  30% {
     opacity: 1;
   }
   80% {
@@ -166,7 +167,7 @@ p {
   0% {
     opacity: 0;
   }
-  40% {
+  30% {
     opacity: 1;
   }
   80% {
@@ -182,6 +183,10 @@ p {
   }
   85% {
     width: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
   100% {
     display: none;
@@ -194,6 +199,10 @@ p {
   }
   85% {
     width: 100%;
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
   100% {
     display: none;
@@ -208,12 +217,12 @@ p {
   display: inline-flex;
   justify-content: center;
   width: 100vw;
-  background-color: var(--white);
-  z-index: 2050;
+  background-color: transparent;
+  z-index: 2200;
   -webkit-animation-name: headerStart;
           animation-name: headerStart;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4.2s;
+          animation-duration: 4.2s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -227,15 +236,19 @@ p {
 @-webkit-keyframes headerStart {
   0% {
     height: 100vh;
+    background-color: transparent;
+  }
+  40% {
     background-color: var(--white);
   }
   70% {
     box-shadow: none;
-    z-index: 2050;
+    z-index: 2200;
   }
   100% {
     justify-content: flex-end;
     height: 3em;
+    background-color: var(--white);
     box-shadow: var(--shadow);
     z-index: 2030;
   }
@@ -243,15 +256,19 @@ p {
 @keyframes headerStart {
   0% {
     height: 100vh;
+    background-color: transparent;
+  }
+  40% {
     background-color: var(--white);
   }
   70% {
     box-shadow: none;
-    z-index: 2050;
+    z-index: 2200;
   }
   100% {
     justify-content: flex-end;
     height: 3em;
+    background-color: var(--white);
     box-shadow: var(--shadow);
     z-index: 2030;
   }
@@ -265,8 +282,8 @@ p {
   opacity: 0;
   -webkit-animation-name: logoContainerStart;
           animation-name: logoContainerStart;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 3.3s;
+          animation-duration: 3.3s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -289,13 +306,18 @@ p {
       }
     }
   }
-  25% {
+  20% {
     opacity: 1;
   }
   50% {
     top: 40%;
-    right: 30%;
+    right: 50%;
     opacity: 1;
+    @media only screen and (min-width: 31.25em) {
+      .mainHeader .mainLogoContainer {
+        right: 30%;
+      }
+    }
   }
   100% {
     top: 0;
@@ -315,13 +337,18 @@ p {
       }
     }
   }
-  25% {
+  20% {
     opacity: 1;
   }
   50% {
     top: 40%;
-    right: 30%;
+    right: 50%;
     opacity: 1;
+    @media only screen and (min-width: 31.25em) {
+      .mainHeader .mainLogoContainer {
+        right: 30%;
+      }
+    }
   }
   100% {
     top: 0;
@@ -453,12 +480,12 @@ p {
   height: 100vh;
   background-color: var(--blackSemiTrans);
   overflow: hidden;
-  transition: 0.6s;
+  transition: 0.5s;
   z-index: 1900;
 }
 @media only screen and (min-width: 31.25em) {
   .menuOverlay {
-    z-index: 2300;
+    z-index: 2030;
   }
 }
 
@@ -506,7 +533,7 @@ p {
 }
 
 .active {
-  color: var(--myRed);
+  color: var(--myBlue);
 }
 
 .menuButton {
@@ -530,8 +557,8 @@ p {
   left: 0;
   height: 0.125em;
   width: 2.3em;
-  background-color: var(--white);
-  transition: 0.7s;
+  background-color: var(--myBlue);
+  transition: 0.5s;
 }
 
 .topMenuBeam {
@@ -550,6 +577,7 @@ p {
   top: 0.8em;
   transform: rotate(-135deg);
   width: 2.5em;
+  background-color: var(--mint);
 }
 
 .middleMenuBeamClose {
@@ -561,6 +589,7 @@ p {
   top: 0.8em;
   transform: rotate(135deg);
   width: 2.5em;
+  background-color: var(--mint);
 }
 
 .parallaxOne {
