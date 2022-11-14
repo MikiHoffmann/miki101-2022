@@ -49,16 +49,24 @@
       display: inline-block;
       margin-right: 0.5em;
       font-size: 1.2em;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
 .menuOverlayShow {
   width: 100%;
   opacity: 1;
+  @include mQuery(xs) {
+    padding-top: 2em;
+  }
   & a {
     padding: 0.5em 0;
   }
 }
 .active {
   color: var(--myBlue);
+  text-shadow: 0px 0px 10px var(--white);
+  transform: scale(1.1);
 }

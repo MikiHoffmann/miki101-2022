@@ -12,22 +12,25 @@ html {
 
 ::-webkit-scrollbar {
   width: 16px;
-  background-color: var(--black);
+  background-color: var(--white);
+  border-left: 0.5px solid var(--black);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--myBlue);
+  box-shadow: 1px 3px 8px var(--black), -1px -1px 6px var(--black);
 }
 
 ::-webkit-scrollbar-button {
   background-color: var(--myBlue);
+  box-shadow: 1px 2px 7px var(--black), -1px -2px 7px var(--black);
 }
 
 body {
   height: 100vh;
   width: 100%;
   background-color: var(--white);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: var(--mainFont);
   color: var(--black);
 }
 
@@ -84,6 +87,11 @@ h2 {
     padding: 0 3rem;
   }
 }
+@media only screen and (min-width: 31.25em) {
+  h2 {
+    font-size: 3rem;
+  }
+}
 
 a {
   text-decoration: none;
@@ -103,7 +111,7 @@ p {
 }
 @media only screen and (min-width: 31.25em) {
   p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -117,6 +125,7 @@ p {
   --myRed: rgb(230, 53, 53);
   --myBlue: rgb(49, 49, 248);
   --mint: rgb(157, 221, 157);
+  --mainFont: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .pageblocker {
@@ -524,11 +533,19 @@ p {
     margin-right: 0.5em;
     font-size: 1.2em;
   }
+  .menuOverlayHide a:hover {
+    transform: scale(1.2);
+  }
 }
 
 .menuOverlayShow {
   width: 100%;
   opacity: 1;
+}
+@media only screen and (max-width: 31.25em) {
+  .menuOverlayShow {
+    padding-top: 2em;
+  }
 }
 .menuOverlayShow a {
   padding: 0.5em 0;
@@ -536,6 +553,8 @@ p {
 
 .active {
   color: var(--myBlue);
+  text-shadow: 0px 0px 10px var(--white);
+  transform: scale(1.1);
 }
 
 .menuButton {
@@ -614,5 +633,6 @@ p {
 }
 .parallaxOne .parallaxArticle {
   background-color: var(--blackTrans);
+  color: var(--white);
   border-radius: 8px;
 }/*# sourceMappingURL=main.css.map */

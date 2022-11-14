@@ -8,6 +8,11 @@
   padding-top: 3em;
 }
 @mixin mQuery($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
   @if $breakpoint == s {
     @media only screen and (min-width: 31.25em) {
       @content;
