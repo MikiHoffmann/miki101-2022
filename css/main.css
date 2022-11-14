@@ -75,7 +75,7 @@ section {
 
 img {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 h2 {
@@ -102,7 +102,7 @@ a {
 p {
   margin: 1.5em 0;
   padding: 0 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 @media only screen and (min-width: 31.25em) {
   p {
