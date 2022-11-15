@@ -613,6 +613,15 @@ p {
   background-color: var(--mint);
 }
 
+.sectionArticle {
+  padding: 0 1.5rem;
+}
+@media only screen and (min-width: 31.25em) {
+  .sectionArticle {
+    padding: 0 3rem;
+  }
+}
+
 .parallaxOne {
   padding: 0 1.5rem;
   display: flex;
