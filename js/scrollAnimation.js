@@ -1,28 +1,37 @@
-const scrollOffset = 100
-const scrollElement = document.querySelector('.jsScrollAnimation')
+//const scrollOffset = 100
+const scrollElements = document.querySelectorAll(".jsScrollAnimation")
 
-const scrollElementInView = (elem, offset = 0) => {
-    const elementTop = elem.getBoundingClientRect().top
-    return (
-        elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
-    )
+const scrollElementInView = (elem, divident = 1) => {
+  const elementTop = elem.getBoundingClientRect().top
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / divident
+  )
+}
+const scrollElementOutView = (elem) => {
+  const elementTop = elem.getBoundingClientRect().top
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  )
 }
 
-const displayScrollElement = () => {
-    scrollElement.classList.add('scrolled')
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled")
 }
-const hideScrollElement = () => {
-    scrollElement.classList.remove('scrolled')
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled")
 }
 
 const handleScrollAnimation = () => {
-    if(scrollElementInView(scrollElement, scrollOffset)) {
-        displayScrollElement()
-    } else {
-        hideScrollElement()
+  scrollElements.forEach((elem) => {
+    if (scrollElementInView(elem, 1.25)) {
+      displayScrollElement(elem)
+    } else if (scrollElementOutView(elem)) {
+      hideScrollElement(elem)
     }
+  })
 }
 
-window.addEventListener('scroll', () => {
-    handleScrollAnimation()
+window.addEventListener("scroll", () => {
+  handleScrollAnimation()
 })
