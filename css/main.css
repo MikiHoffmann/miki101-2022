@@ -613,6 +613,14 @@ p {
   background-color: var(--mint);
 }
 
+.jsScrollAnimation {
+  opacity: 0;
+  transition: all 1s;
+}
+.jsScrollAnimation.scrolled {
+  opacity: 1;
+}
+
 .sectionArticle {
   padding: 0 1.5rem;
 }
@@ -624,6 +632,8 @@ p {
 
 .parallaxOne {
   padding: 0 1.5rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -632,7 +642,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
 }
 @media only screen and (min-width: 31.25em) {
