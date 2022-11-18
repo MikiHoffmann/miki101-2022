@@ -33,11 +33,6 @@ main {
     @include showItem;
     overflow-x: hidden;
 }
-section {
-    @include sectionPadding;
-    min-height: 100vh;
-    margin-bottom: 1em;
-}
 .color {
     color: var(--myBlue);
 }

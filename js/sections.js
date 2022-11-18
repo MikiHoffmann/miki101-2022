@@ -4,7 +4,13 @@ const createChildElement = (parentElement, element, className) => {
   parentElement.appendChild(childElement)
   childElement.classList.add(className)
 }
-// titles
+const lineContainer = document.querySelector('#lineContainer')
+
+
+for (let i = 0; i < 10; i++) {
+  createChildElement(lineContainer, 'div', 'line')
+}
+
 const titles = ["Me", "Skills", "Education", "Work", "Contact"]
 
 const skills = document.querySelector("#skills .sectionArticle")

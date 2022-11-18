@@ -1,4 +1,28 @@
 @import "./mixins";
+section {
+    @include sectionPadding;
+    min-height: 100vh;
+    margin-bottom: 1em;
+}
 .sectionArticle {
     @include pagePadding
 }
+/*
+.home,
+.homeArticle {
+    animation: home 3s ease-out;
+    animation-delay: 9s;
+    overflow-y: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes home {
+    0% {
+        transform: translate(0);
+        height: 100%;
+    }
+    100% {
+        transform: translate(100%, -100%);
+        height: 0;
+    }
+}
+*/

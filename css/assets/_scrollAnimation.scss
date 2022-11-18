@@ -1,7 +1,19 @@
 .jsScrollAnimation {
     opacity: 0;
-    transition: all 1s;
+    transition: all 1.2s;
     &.scrolled {
         opacity: 1;
+        &.fadeInUp {
+            animation: fadeInUp 1.2s ease-out both;
+        }
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(2em);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
     }
 }
+
