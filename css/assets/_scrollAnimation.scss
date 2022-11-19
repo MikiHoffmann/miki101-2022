@@ -5,6 +5,7 @@
         opacity: 1;
         &.fadeInUp {
             animation: fadeInUp 1.2s ease-out both;
+            animation-delay: .3s;
         }
         @keyframes fadeInUp {
             0% {

@@ -1,7 +1,4 @@
 .parallaxOne {
-    @include pagePadding;
-    padding-top: 1em;
-    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,11 +7,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    min-height: 100vh;
+    height: fit-content;
     max-width: 100%;
+    overflow-y: hidden;
     .parallaxArticle {
         background-color: var(--blackTrans);
         color: var(--white);
-        border-radius: 8px;
     }
 }

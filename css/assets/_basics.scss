@@ -42,7 +42,8 @@ img {
 }
 h2 {
     @include pagePadding;
-    margin-top: 3em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
     @include mQuery(s) {
         font-size: 3rem;
     }
