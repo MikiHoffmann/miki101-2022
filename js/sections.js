@@ -7,7 +7,7 @@ const createChildElement = (parentElement, element, className) => {
 const lineContainer = document.querySelector('#lineContainer')
 
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 19; i++) {
   createChildElement(lineContainer, 'div', 'line')
 }
 

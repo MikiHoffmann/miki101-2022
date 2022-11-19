@@ -25,52 +25,153 @@
   }
   .line {
     position: fixed;
+    display: block;
     height: 0.3em;
-    width: 100vw;
-    animation: lineSweep 3.9s ease-in-out;
     animation-fill-mode: forwards;
   }
-  @keyframes lineSweep {
+  .line:nth-of-type(1) {
+    top: 5%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+    animation-delay: .6s;
+  }
+  .line:nth-of-type(2) {
+    top: 8%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+  }
+  .line:nth-of-type(3) {
+    top: 12%;
+    background-color: var(--myBlue);
+    animation: lineSweepLeft 3.9s ease-in-out;
+    animation-delay: .6s;
+  }
+  .line:nth-of-type(4) {
+    top: 15%;
+    background-color: var(--mint);
+    animation: lineSweepRight 3.9s ease-in-out;
+  }
+  .line:nth-of-type(5) {
+    top: 20%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+  }
+  .line:nth-of-type(6) {
+    top: 23%;
+    background-color: var(--myBlue);
+    animation: lineSweepright 3.9s ease-in-out;
+    animation-delay: 1s;
+  }
+  .line:nth-of-type(7) {
+    top: 30%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+    animation-delay: .3s;
+  }
+  .line:nth-of-type(8) {
+    top: 36%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3.9s ease-in-out;
+  }
+  .line:nth-of-type(9) {
+    top: 52%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3.9s ease-in-out;
+  }
+  .line:nth-of-type(10) {
+    top: 56%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+    animation-delay: .4s;
+  }
+  .line:nth-of-type(11) {
+    top: 61%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3s ease-in-out;
+  }
+  .line:nth-of-type(12) {
+    top: 67%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3.9s ease-in-out;
+    animation-delay: .3s;
+  }
+  .line:nth-of-type(13) {
+    top: 70%;
+    background-color: var(--mint);
+    animation: lineSweepLeft 3.9s ease-in-out;
+  }
+  .line:nth-of-type(14) {
+    top: 76%;
+    background-color: var(--myBlue);
+    animation: lineSweepLeft 3.9s ease-in-out;
+    animation-delay: .5s;
+  }
+  .line:nth-of-type(15) {
+    top: 79%;
+    background-color: var(--mint);
+    animation: lineSweepRight 3.9s ease-in-out;
+  }
+  .line:nth-of-type(16) {
+    top: 82%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3.5s ease-in-out;
+    animation-delay: 1s;
+  }
+  .line:nth-of-type(17) {
+    top: 88%;
+    background-color: var(--mint);
+    animation: lineSweepRight 3.9s ease-in-out;
+    animation-delay: .6s;
+  }
+  .line:nth-of-type(18) {
+    top: 94%;
+    background-color: var(--myBlue);
+    animation: lineSweepLeft 3.3s ease-in-out;
+  }
+  .line:nth-of-type(19) {
+    top: 98%;
+    background-color: var(--myBlue);
+    animation: lineSweepRight 3.9s ease-in-out;
+  }
+}
+@keyframes lineSweepLeft {
     0% {
-        width: 0vw;
+        display: block;
+        width: 100%;
+        transform: translate(-100%);
     }
     40% {
         width: 100%;
+        transform: translate(0);
+    }
+    98% {
+        transform: translate(100%);
+    }
+    97% {
+        display: none;
+        opacity: 0;
     }
     100% {
         width: 0;
     }
   }
-  .line:nth-of-type(1) {
-    top: 5%;
-    background-color: var(--mint);
+  @keyframes lineSweepRight {
+    0% {
+        width: 100vw;
+        transform: translate(100%);
+    }
+    40% {
+        width: 100%;
+        transform: translate(0);
+    }
+    98% {
+        transform: translate(-100%);
+    }
+    99% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        width: 0;
+    }
   }
-  .line:nth-of-type(2) {
-    top: 8%;
-    background-color: var(--mint);
-  }
-  .line:nth-of-type(3) {
-    top: 12%;
-    background-color: var(--myBlue);
-  }
-  .line:nth-of-type(4) {
-    top: 15%;
-    background-color: var(--mint);
-  }
-  .line:nth-of-type(5) {
-    top: 20%;
-    background-color: var(--mint);
-  }
-  .line:nth-of-type(6) {
-    top: 23%;
-    background-color: var(--myBlue);
-  }
-  .line:nth-of-type(7) {
-    top: 30%;
-    background-color: var(--mint);
-  }
-  .line:nth-of-type(8) {
-    top: 36%;
-    background-color: var(--myBlue);
-  }
-}
