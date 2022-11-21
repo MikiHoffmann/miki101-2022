@@ -110,23 +110,7 @@ a {
 
 p {
   margin: 1.5em 0;
-  padding: 0 1.5rem;
   font-size: 1.3rem;
-}
-@media only screen and (min-width: 31.25em) {
-  p {
-    padding: 0 2.5rem;
-  }
-}
-@media only screen and (min-width: 40em) {
-  p {
-    padding: 0 3.5rem;
-  }
-}
-@media only screen and (min-width: 55em) {
-  p {
-    padding: 0 4.5rem;
-  }
 }
 @media only screen and (min-width: 31.25em) {
   p {
@@ -1137,6 +1121,29 @@ section {
   }
 }
 
+.linkIconContainer {
+  display: flex;
+}
+.linkIconContainer a {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--mint);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.linkIconContainer a:hover {
+  background-color: var(--myBlue);
+  transform: scale(1.2);
+}
+.linkIconContainer a img {
+  height: 5em;
+  width: auto;
+}
+
 .parallaxOne {
   display: flex;
   flex-direction: column;
@@ -1153,6 +1160,22 @@ section {
   overflow-y: hidden;
 }
 .parallaxOne .parallaxArticle {
+  padding: 0 1.5rem;
   background-color: var(--blackTrans);
   color: var(--white);
+}
+@media only screen and (min-width: 31.25em) {
+  .parallaxOne .parallaxArticle {
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .parallaxOne .parallaxArticle {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 55em) {
+  .parallaxOne .parallaxArticle {
+    padding: 0 4.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

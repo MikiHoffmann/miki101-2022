@@ -38,3 +38,21 @@ section {
     }
   }
 }
+.linkIconContainer {
+  display: flex;
+  a {
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--mint);
+    border-radius: 50%;
+    transition: .4s;
+    &:hover {
+      background-color: var(--myBlue);
+      transform: scale(1.2);
+    }
+    img {
+      height: 5em;
+      width: auto;
+    }
+  }
+}
