@@ -88,6 +88,10 @@ h2 {
   }
 }
 
+h3 {
+  margin: 1em 0;
+}
+
 a {
   text-decoration: none;
   color: var(--mint);
@@ -106,6 +110,17 @@ p {
 }
 @media only screen and (min-width: 31.25em) {
   p {
+    font-size: 1.8rem;
+  }
+}
+
+li {
+  list-style-type: none;
+  width: 100%;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 31.25em) {
+  li {
     font-size: 1.8rem;
   }
 }
@@ -905,6 +920,26 @@ p {
     transform: translateY(0);
   }
 }
+.jsScrollAnimation.scrolled.rotateX {
+  -webkit-animation: rotateX 1.2s ease-in-out;
+          animation: rotateX 1.2s ease-in-out;
+}
+@-webkit-keyframes rotateX {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
 
 section {
   padding-top: 3em;
@@ -914,18 +949,33 @@ section {
 
 .sectionArticle {
   padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width: 31.25em) {
   .sectionArticle {
     padding: 0 3rem;
   }
 }
+@media only screen and (min-width: 31.25em) {
+  .sectionArticle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .sectionArticle div {
+    flex: 40%;
+  }
+}
+.sectionArticle div {
+  margin-bottom: 2em;
+}
 
 .iconContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 }

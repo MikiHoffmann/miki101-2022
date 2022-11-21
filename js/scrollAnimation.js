@@ -1,4 +1,8 @@
 //const scrollOffset = 100
+let listScrollelements = document.querySelectorAll("li")
+for (i = 0; i < listScrollelements.length; i++) {
+  listScrollelements[i].classList.add("jsScrollAnimation")
+}
 const scrollElements = document.querySelectorAll(".jsScrollAnimation")
 
 const scrollElementInView = (elem, divident = 1) => {

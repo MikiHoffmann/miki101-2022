@@ -1,23 +1,36 @@
 @import "./mixins";
 section {
-    @include sectionPadding;
-    min-height: 100vh;
-    margin-bottom: 1em;
+  @include sectionPadding;
+  min-height: 100vh;
+  margin-bottom: 1em;
 }
 .sectionArticle {
-    @include pagePadding
-}
-.iconContainer {
-    display: flex;
+  @include pagePadding;
+  display: flex;
+  flex-direction: column;
+  @include mQuery(s) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    & .skillsIcon {
-        margin: .5em 0;
-        border: 1px solid var(--black);
-        border-radius: 8px;
-        box-shadow: var(--blackShadow);
+    gap: 2em;
+    div {
+        flex: 40%;
     }
+  }
+  div {
+    margin-bottom: 2em;
+  }
+}
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  .skillsIcon {
+    margin: 0.5em 0;
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    box-shadow: var(--blackShadow);
+  }
 }

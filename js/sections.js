@@ -32,6 +32,8 @@ for (let i = 0; i < skillsIconsCoding.length; i++) {
 let iconCoding = codingIcons.querySelectorAll("img")
 for (let i = 0; i < skillsIconsCoding.length; i++) {
   iconCoding[i].src = `img/icons/${skillsIconsCoding[i].image}`
+  iconCoding[i].classList.add("jsScrollAnimation")
+  iconCoding[i].classList.add("rotateX")
 }
 
 const cpuIcons = document.querySelector("#cpuIcons")
