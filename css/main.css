@@ -79,7 +79,17 @@ h2 {
 }
 @media only screen and (min-width: 31.25em) {
   h2 {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  h2 {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  h2 {
+    padding: 0 4.5rem;
   }
 }
 @media only screen and (min-width: 31.25em) {
@@ -105,7 +115,17 @@ p {
 }
 @media only screen and (min-width: 31.25em) {
   p {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  p {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  p {
+    padding: 0 4.5rem;
   }
 }
 @media only screen and (min-width: 31.25em) {
@@ -519,7 +539,17 @@ li {
 }
 @media only screen and (min-width: 31.25em) {
   .mainHeader {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .mainHeader {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .mainHeader {
+    padding: 0 4.5rem;
   }
 }
 @-webkit-keyframes headerStart {
@@ -755,7 +785,17 @@ li {
 }
 @media only screen and (min-width: 31.25em) {
   .navBar {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .navBar {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .navBar {
+    padding: 0 4.5rem;
   }
 }
 
@@ -802,7 +842,17 @@ li {
 }
 @media only screen and (min-width: 31.25em) and (min-width: 31.25em) {
   .menuOverlayHide {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 31.25em) and (min-width: 40em) {
+  .menuOverlayHide {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 31.25em) and (min-width: 50em) {
+  .menuOverlayHide {
+    padding: 0 4.5rem;
   }
 }
 @media only screen and (min-width: 31.25em) {
@@ -954,7 +1004,17 @@ section {
 }
 @media only screen and (min-width: 31.25em) {
   .sectionArticle {
-    padding: 0 3rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .sectionArticle {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  .sectionArticle {
+    padding: 0 4.5rem;
   }
 }
 @media only screen and (min-width: 31.25em) {
