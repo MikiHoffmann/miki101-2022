@@ -2,6 +2,7 @@
 let listScrollelements = document.querySelectorAll("li")
 for (i = 0; i < listScrollelements.length; i++) {
   listScrollelements[i].classList.add("jsScrollAnimation")
+  listScrollelements[i].classList.add("fadeInRight")
 }
 const scrollElements = document.querySelectorAll(".jsScrollAnimation")
 

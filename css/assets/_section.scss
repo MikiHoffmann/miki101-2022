@@ -8,12 +8,12 @@ section {
   @include pagePadding;
   display: flex;
   flex-direction: column;
-  @include mQuery(s) {
+  @include mQuery(l) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2em;
     div {
-        flex: 40%;
+      flex: 40%;
     }
   }
   div {
@@ -27,10 +27,14 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  .skillsIcon {
+  .skillsIcon,
+  .languageIcon {
     margin: 0.5em 0;
     border: 1px solid var(--black);
     border-radius: 8px;
     box-shadow: var(--blackShadow);
+    @include mQuery(m) {
+      margin: 0.5em 0.5em 0.5em 0;
+    }
   }
 }

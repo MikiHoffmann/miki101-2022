@@ -17,13 +17,68 @@
     }
     &.rotateX {
       animation: rotateX 1.2s ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    &.rotateX:nth-of-type(2),
+    &.rotateX:nth-of-type(5),
+    &.rotateX:nth-of-type(8),
+    &.rotateX:nth-of-type(11) {
+      animation-delay: .2s;
+    }
+    &.rotateX:nth-of-type(3),
+    &.rotateX:nth-of-type(6),
+    &.rotateX:nth-of-type(9)  {
+      animation-delay: .4s;
     }
     @keyframes rotateX {
       0% {
         transform: rotateY(90deg);
+        opacity: 0;
       }
       100% {
         transform: rotateY(0deg);
+        opacity: 1;
+      }
+    }
+    &.fadeInRight {
+      animation: fadeInRight 1.3s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fadeInRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    &.grow {
+      animation: grow 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    &.grow:nth-of-type(2) {
+      animation-delay: .2s;
+    }
+    &.grow:nth-of-type(3) {
+      animation-delay: .4s;
+    }
+    @keyframes grow {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
       }
     }
   }

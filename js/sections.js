@@ -32,8 +32,7 @@ for (let i = 0; i < skillsIconsCoding.length; i++) {
 let iconCoding = codingIcons.querySelectorAll("img")
 for (let i = 0; i < skillsIconsCoding.length; i++) {
   iconCoding[i].src = `img/icons/${skillsIconsCoding[i].image}`
-  iconCoding[i].classList.add("jsScrollAnimation")
-  iconCoding[i].classList.add("rotateX")
+  iconCoding[i].classList.add("jsScrollAnimation", "rotateX")
 }
 
 const cpuIcons = document.querySelector("#cpuIcons")
@@ -60,9 +59,10 @@ const skillsIconsLanguage = [
   { image: "GERflag100.png" },
 ]
 for (let i = 0; i < skillsIconsLanguage.length; i++) {
-  createChildElement(languageIcons, "img", "skillsIcon")
+  createChildElement(languageIcons, "img", "languageIcon")
 }
 let iconLanguage = languageIcons.querySelectorAll("img")
 for (let i = 0; i < skillsIconsLanguage.length; i++) {
   iconLanguage[i].src = `img/icons/${skillsIconsLanguage[i].image}`
+  iconLanguage[i].classList.add("jsScrollAnimation", "grow")
 }
