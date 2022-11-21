@@ -115,6 +115,7 @@ p {
   --blackSemiTrans: rgba(0,0,0,0.8);
   --blackTrans: rgba(0,0,0,0.6);
   --white: rgb(255, 255, 255);
+  --blackShadow: 1px 1px 30px rgb(0,0,0);
   --whiteShadow: 2px 2px 50px rgb(255, 255, 255);
   --mintShadow: 2px 2px 70px rgb(157, 221, 157);
   --myRed: rgb(230, 53, 53);
@@ -920,25 +921,21 @@ section {
   }
 }
 
-/*
-.home,
-.homeArticle {
-    animation: home 3s ease-out;
-    animation-delay: 9s;
-    overflow-y: hidden;
-    animation-fill-mode: forwards;
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
-@keyframes home {
-    0% {
-        transform: translate(0);
-        height: 100%;
-    }
-    100% {
-        transform: translate(100%, -100%);
-        height: 0;
-    }
+.iconContainer .skillsIcon {
+  margin: 0.5em 0;
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  box-shadow: var(--blackShadow);
 }
-*/
+
 .parallaxOne {
   display: flex;
   flex-direction: column;
