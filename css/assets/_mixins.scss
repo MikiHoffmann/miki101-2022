@@ -18,6 +18,16 @@
       @content;
     }
   }
+  @if $breakpoint == m {
+    @media only screen and (min-width: 40em) {
+      @content;
+    }
+  }
+  @if $breakpoint == l {
+    @media only screen and (min-width: 50em) {
+      @content
+    }
+  }
 }
 @mixin showItem() {
   opacity: 0;
