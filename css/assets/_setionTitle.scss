@@ -1,0 +1,33 @@
+.sectionTitle {
+    position: relative;
+    height: 4em;
+    width: 100%;
+    background: linear-gradient(38deg, var(--mint), var(--mint), var(--mint),var(--white),var(--myBlue), var(--myBlue), var(--myBlue));
+    background-size: 200%;
+    animation: backgroundMove 8s ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+.titleText {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    color: black;
+    font-size: 3.5em;
+    font-weight: bold;
+    mix-blend-mode: screen;
+}
