@@ -11,13 +11,18 @@ section {
   @include mQuery(l) {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 2em;
     div {
       flex: 40%;
     }
   }
-  div {
-    margin-bottom: 2em;
+}
+#skills {
+  .sectionArticle {
+    div {
+      margin-bottom: 2em;
+    }
   }
 }
 .iconContainer {
@@ -40,15 +45,21 @@ section {
 }
 .linkIconContainer {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  @include mQuery(m) {
+    justify-content: flex-end;
+  }
   a {
+    margin: 0 0.6em;
     height: fit-content;
     width: fit-content;
     background-color: var(--mint);
     border-radius: 50%;
-    transition: .4s;
+    box-shadow: var(--blackShadow);
     &:hover {
       background-color: var(--myBlue);
-      transform: scale(1.2);
     }
     img {
       height: 5em;
