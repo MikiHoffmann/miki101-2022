@@ -10,8 +10,6 @@ for (let i = 0; i < 19; i++) {
   createChildElement(lineContainer, "div", "line")
 }
 
-const titles = ["Me", "Skills", "Education", "Work", "Contact"]
-
 const codingIcons = document.querySelector("#codingIcons")
 const skillsIconsCoding = [
   { image: "HTMLicon.png" },
@@ -32,7 +30,7 @@ for (let i = 0; i < skillsIconsCoding.length; i++) {
 let iconCoding = codingIcons.querySelectorAll("img")
 for (let i = 0; i < skillsIconsCoding.length; i++) {
   iconCoding[i].src = `img/icons/${skillsIconsCoding[i].image}`
-  iconCoding[i].classList.add("jsScrollAnimation", "rotateX")
+  iconCoding[i].classList.add("jsScrollAnimation", "rotateY")
 }
 
 const cpuIcons = document.querySelector("#cpuIcons")
@@ -50,6 +48,7 @@ for (let i = 0; i < skillsIconsCPU.length; i++) {
 let iconCPU = cpuIcons.querySelectorAll("img")
 for (let i = 0; i < skillsIconsCPU.length; i++) {
   iconCPU[i].src = `img/icons/${skillsIconsCPU[i].image}`
+  iconCPU[i].classList.add("jsScrollAnimation", "rotateX")
 }
 
 const languageIcons = document.querySelector("#languageIcons")

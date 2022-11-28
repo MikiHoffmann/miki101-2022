@@ -1055,8 +1055,8 @@ li {
   }
 }
 .jsScrollAnimation.scrolled.grow {
-  -webkit-animation: grow 1.5s ease-in-out;
-          animation: grow 1.5s ease-in-out;
+  -webkit-animation: grow 1.7s ease-in-out;
+          animation: grow 1.7s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -1195,9 +1195,9 @@ section {
 
 .sectionTitle {
   position: relative;
-  height: 4em;
+  height: 4.1em;
   width: 100%;
-  background: linear-gradient(38deg, var(--mint), var(--mint), var(--mint), var(--white), var(--myBlue), var(--myBlue), var(--myBlue));
+  background: linear-gradient(90deg, var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--mint), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue));
   background-size: 200%;
   -webkit-animation: backgroundMove 8s ease-in-out;
           animation: backgroundMove 8s ease-in-out;
