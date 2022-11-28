@@ -15,5 +15,14 @@
         @include pagePadding;
         background-color: var(--blackTrans);
         color: var(--white);
+        .responsiveParagraph {
+            display: flex;
+            flex-direction: column;
+            @include mQuery(m) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
     }
 }

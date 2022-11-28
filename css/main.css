@@ -100,6 +100,12 @@ h2 {
 
 h3 {
   margin: 1em 0;
+  font-size: 1.8rem;
+}
+@media only screen and (min-width: 40em) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 a {
@@ -1275,5 +1281,16 @@ section {
 @media only screen and (min-width: 55em) {
   .parallaxOne .parallaxArticle {
     padding: 0 4.5rem;
+  }
+}
+.parallaxOne .parallaxArticle .responsiveParagraph {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 40em) {
+  .parallaxOne .parallaxArticle .responsiveParagraph {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }/*# sourceMappingURL=main.css.map */
