@@ -99,6 +99,7 @@ h2 {
 }
 
 h3 {
+  width: 100%;
   margin: 1em 0;
   font-size: 1.8rem;
 }
@@ -119,6 +120,7 @@ a:hover {
 }
 
 p {
+  width: 100%;
   margin: 1.5em 0;
   font-size: 1.3rem;
 }
@@ -1199,6 +1201,18 @@ section {
   width: auto;
 }
 
+.responsiveParagraph {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 40em) {
+  .responsiveParagraph {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
 .sectionTitle {
   position: relative;
   height: 4.1em;
@@ -1281,16 +1295,5 @@ section {
 @media only screen and (min-width: 55em) {
   .parallaxOne .parallaxArticle {
     padding: 0 4.5rem;
-  }
-}
-.parallaxOne .parallaxArticle .responsiveParagraph {
-  display: flex;
-  flex-direction: column;
-}
-@media only screen and (min-width: 40em) {
-  .parallaxOne .parallaxArticle .responsiveParagraph {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
   }
 }/*# sourceMappingURL=main.css.map */
