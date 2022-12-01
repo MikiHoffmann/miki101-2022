@@ -1,0 +1,102 @@
+@import "./mixins";
+footer {
+  @include pagePadding;
+}
+.footerSection {
+  margin-bottom: 1.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+  @include mQuery(m) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  div {
+    font-size: 1rem;
+    .footerLogo {
+      height: 2em;
+      .footerLogoLetterM,
+      .footerLogoLetterI1,
+      .footerLogoLetterK,
+      .footerLogoLetterI2 {
+        height: 70%;
+        animation-name: letterGlow;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        svg {
+          height: 100%;
+          width: auto;
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+      .footerLogoLetterM {
+        animation-delay: 0.5s;
+      }
+      .footerLogoLetterI1 {
+        animation-delay: 1s;
+      }
+      .footerLogoLetterK {
+        animation-delay: 1.5s;
+      }
+      .footerLogoLetterI2 {
+        animation-delay: 2s;
+      }
+      @keyframes letterGlow {
+        0% {
+          height: 70%;
+          color: var(--myBlue);
+        }
+        25% {
+          color: var(--myBlue);
+        }
+        50% {
+          height: 100%;
+          color: var(--mint);
+          opacity: 0.5;
+        }
+        75% {
+          color: var(--myBlue);
+        }
+        100% {
+          height: 70%;
+          color: var(--myBlue);
+        }
+      }
+    }
+  }
+  .footerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include mQuery(m) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .linkIconContainer {
+      img {
+        height: 2em;
+        width: 2em;
+      }
+    }
+  }
+  .footerIconContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1.2em;
+    @include mQuery(m) {
+        padding: 0;
+    }
+    img {
+      display: block;
+      height: 2.5em;
+      width: 2.5em;
+      margin-right: 0.8em;
+    }
+  }
+}
