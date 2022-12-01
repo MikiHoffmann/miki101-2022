@@ -1300,6 +1300,7 @@ section {
 
 footer {
   padding: 0 1.5rem;
+  padding-bottom: 2.5em;
 }
 @media only screen and (min-width: 31.25em) {
   footer {
@@ -1431,6 +1432,12 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.footerSection .footerContact a {
+  color: var(--black);
+}
+.footerSection .footerContact a:hover {
+  color: var(--myBlue);
 }
 .footerSection .footerContact .linkIconContainer img {
   height: 2em;

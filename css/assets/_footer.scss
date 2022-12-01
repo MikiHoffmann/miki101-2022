@@ -1,6 +1,7 @@
 @import "./mixins";
 footer {
   @include pagePadding;
+  padding-bottom: 2.5em;
 }
 .footerSection {
   margin-bottom: 1.8em;
@@ -76,6 +77,12 @@ footer {
     @include mQuery(m) {
       flex-direction: row;
       justify-content: space-between;
+    }
+    a {
+        color: var(--black);
+        &:hover {
+            color: var(--myBlue);
+        }
     }
     .linkIconContainer {
       img {
