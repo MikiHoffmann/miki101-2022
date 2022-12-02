@@ -43,6 +43,20 @@ section {
     }
   }
 }
+.contactArticle {
+  font-size: 1.2em;  
+  a {
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    color: var(--black);
+    transition: all .3s;
+    &:hover {
+      color: var(--myBlue);
+      transform: scale(1.1);
+    }
+  }
+}
 .linkIconContainer {
   display: flex;
   align-items: center;
@@ -60,6 +74,7 @@ section {
     box-shadow: var(--blackShadow);
     &:hover {
       background-color: var(--myBlue);
+      box-shadow: var(--blackShadowSmall), var(--mintShadow);
     }
     img {
       height: 5em;

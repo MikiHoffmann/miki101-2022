@@ -147,6 +147,7 @@ li {
   --blackTrans: rgba(0,0,0,0.6);
   --white: rgb(255, 255, 255);
   --blackShadow: 1px 1px 30px rgb(0,0,0);
+  --blackShadowSmall: .5px .5px 12px rgb(0,0,0);
   --whiteShadow: 2px 2px 50px rgb(255, 255, 255);
   --mintShadow: 2px 2px 70px rgb(157, 221, 157);
   --myRed: rgb(230, 53, 53);
@@ -1170,6 +1171,25 @@ section {
   }
 }
 
+.contactArticle {
+  font-size: 1.2em;
+}
+.contactArticle a {
+  display: inline-block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--black);
+  transition: all 0.3s;
+}
+.contactArticle a:hover {
+  color: var(--myBlue);
+  transform: scale(1.1);
+}
+
 .linkIconContainer {
   display: flex;
   align-items: center;
@@ -1195,6 +1215,7 @@ section {
 }
 .linkIconContainer a:hover {
   background-color: var(--myBlue);
+  box-shadow: var(--blackShadowSmall), var(--mintShadow);
 }
 .linkIconContainer a img {
   height: 5em;
