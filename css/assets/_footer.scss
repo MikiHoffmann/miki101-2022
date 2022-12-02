@@ -1,8 +1,9 @@
 @import "./mixins";
 footer {
-  @include pagePadding;
+  padding-bottom: 3.5rem;
 }
-.footerSection {
+.footerSection:not(.footerSection:nth-of-type(1)) {
+  @include pagePadding;
   margin-bottom: 1.8em;
   display: flex;
   flex-direction: column;
