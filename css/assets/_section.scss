@@ -44,6 +44,17 @@ section {
   }
 }
 .contactArticle {
+  display: flex;
+  flex-direction: column;
+  @include mQuery(m) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    div {
+      flex: 50%;
+      height: fit-content;
+    }
+  }
   font-size: 1.2em;  
   a {
     display: inline-block;
@@ -56,19 +67,30 @@ section {
       transform: scale(1.1);
     }
   }
+  .portretTwo {
+    display: block;
+    height: auto;
+    width: 80%;
+    margin: 5% auto;
+    border: 1.5px solid var(--mint);
+    border-radius: 15px;
+    outline: 1px solid var(--black);
+    box-shadow: var(--blackShadow);
+    opacity: 0;
+  }
 }
 .linkIconContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin: 0;
+  justify-content: center;
+  margin: 1.5em 0;
   @include mQuery(m) {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   a {
-    margin: 0 0.6em;
     height: fit-content;
     width: fit-content;
+    margin: 0 .5em;
     background-color: var(--mint);
     border-radius: 50%;
     box-shadow: var(--blackShadow);
