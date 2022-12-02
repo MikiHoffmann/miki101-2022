@@ -1,7 +1,6 @@
 @import "./mixins";
 footer {
   @include pagePadding;
-  padding-bottom: 2.5em;
 }
 .footerSection {
   margin-bottom: 1.8em;
@@ -9,7 +8,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3em;
+  padding-bottom: 3em;
   @include mQuery(m) {
     flex-direction: row;
     justify-content: space-around;
@@ -79,10 +78,10 @@ footer {
       justify-content: space-between;
     }
     a {
-        color: var(--black);
-        &:hover {
-            color: var(--myBlue);
-        }
+      color: var(--black);
+      &:hover {
+        color: var(--myBlue);
+      }
     }
     .linkIconContainer {
       img {
@@ -97,7 +96,7 @@ footer {
     align-items: center;
     padding-top: 1.2em;
     @include mQuery(m) {
-        padding: 0;
+      padding: 0;
     }
     img {
       display: block;
