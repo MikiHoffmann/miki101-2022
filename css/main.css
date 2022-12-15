@@ -68,6 +68,7 @@ main {
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
@@ -565,7 +566,7 @@ li {
     justify-content: flex-end;
     height: 3em;
     background-color: var(--white);
-    box-shadow: var(--mintShadow);
+    box-shadow: var(--mintShadow), var(--blackShadowSmall);
     z-index: 2030;
   }
 }
@@ -585,7 +586,7 @@ li {
     justify-content: flex-end;
     height: 3em;
     background-color: var(--white);
-    box-shadow: var(--mintShadow);
+    box-shadow: var(--mintShadow), var(--blackShadowSmall);
     z-index: 2030;
   }
 }
@@ -1145,6 +1146,33 @@ section {
   }
 }
 
+.sectionImgContainer {
+  padding: 0 1.5rem;
+}
+@media only screen and (min-width: 31.25em) {
+  .sectionImgContainer {
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .sectionImgContainer {
+    padding: 0 3.5rem;
+  }
+}
+@media only screen and (min-width: 55em) {
+  .sectionImgContainer {
+    padding: 0 4.5rem;
+  }
+}
+.sectionImgContainer .sectionEndImg {
+  margin: auto;
+  opacity: 0.5;
+  border-radius: 15px;
+  border: 0.5px solid var(--myBlue);
+  outline: 0.5px solid var(--mint);
+  box-shadow: var(--blackShadow), var(--blackShadowSmall);
+}
+
 #skills .sectionArticle div {
   margin-bottom: 2em;
 }
@@ -1153,7 +1181,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
 }
@@ -1161,14 +1189,8 @@ section {
 .iconContainer .languageIcon {
   margin: 0.5em 0;
   border: 1px solid var(--black);
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: var(--blackShadow);
-}
-@media only screen and (min-width: 40em) {
-  .iconContainer .skillsIcon,
-.iconContainer .languageIcon {
-    margin: 0.5em 0.5em 0.5em 0;
-  }
 }
 
 .contactArticle {
@@ -1344,7 +1366,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-image: url(../../img/sky.jpg);
+  background-image: url(../../img/background/AmsterdamFromTheSky.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1537,4 +1559,9 @@ footer {
   height: 2.5em;
   width: 2.5em;
   margin-right: 0.8em;
+}
+
+.credit {
+  text-align: center;
+  color: var(--blackTrans);
 }/*# sourceMappingURL=main.css.map */
