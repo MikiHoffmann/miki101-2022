@@ -147,7 +147,7 @@ li {
   --blackSemiTrans: rgba(0,0,0,0.8);
   --blackTrans: rgba(0,0,0,0.6);
   --white: rgb(255, 255, 255);
-  --blackShadow: 1px 1px 30px rgb(0,0,0);
+  --blackShadow: 1px 1px 35px rgb(0,0,0);
   --blackShadowSmall: .5px .5px 12px rgb(0,0,0);
   --whiteShadow: 2px 2px 50px rgb(255, 255, 255);
   --mintShadow: 2px 2px 70px rgb(157, 221, 157);
@@ -879,7 +879,7 @@ li {
 
 .active {
   color: var(--myBlue);
-  text-shadow: 0px 0px 10px var(--white);
+  text-shadow: 0px 0px 0.5px var(--mint), 0px 0px 10px var(--white);
   transform: scale(1.1);
 }
 
@@ -1168,8 +1168,8 @@ section {
   margin: auto;
   opacity: 0.5;
   border-radius: 15px;
-  border: 0.5px solid var(--myBlue);
-  outline: 0.5px solid var(--mint);
+  border: 0.5px solid var(--mint);
+  outline: 0.5px solid var(--black);
   box-shadow: var(--blackShadow), var(--blackShadowSmall);
 }
 
@@ -1234,7 +1234,7 @@ section {
   border: 1.5px solid var(--mint);
   border-radius: 15px;
   outline: 1px solid var(--black);
-  box-shadow: var(--blackShadow);
+  box-shadow: var(--blackShadow), var(--blackShadowSmall);
   opacity: 0;
 }
 
