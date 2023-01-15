@@ -4,6 +4,65 @@ section {
   min-height: 100vh;
   margin-bottom: 1em;
 }
+.home {
+  min-height: 100vh;
+  background-image: url(../../img/mikiSmile.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  @include mQuery(m) {
+    background-position: center;
+  }
+}
+.homeArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 -2%;
+  background-color: rgba(255,255,255,0.6);
+  font-size: 16.5vw;
+  color: var(--white);
+  div {
+    padding-top: .4em;
+    span {
+      animation: fadeText 5s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    span:nth-of-type(1) {
+      animation-delay: .4s;
+    }
+    span:nth-of-type(3),
+    span:nth-of-type(7) {
+      animation-delay: 1.3s;
+    }
+    span:nth-of-type(5) {
+      animation-delay: 2s;
+    }
+    span:nth-of-type(9) {
+      animation-delay: .9s;
+    }
+  }
+  @include mQuery(l) {
+    font-size: 9.15vw;
+  }
+  text-align: center;
+  word-break: break-all;
+}
+@keyframes fadeText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sectionArticle {
   @include pagePadding;
   display: flex;
