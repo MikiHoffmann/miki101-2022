@@ -1496,6 +1496,42 @@ section {
   }
 }
 
+.iFrameArticle {
+  padding-top: 1.7em;
+}
+.iFrameArticle .iFrameLinkContainer {
+  width: 100%;
+  aspect-ratio: 2/1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  background-color: var(--blackTrans);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-blend-mode: multiply;
+  color: var(--white);
+  border-radius: 15px;
+  border: 0.5px solid var(--mint);
+  outline: 0.5px solid var(--white);
+  box-shadow: var(--blackShadow), var(--blackShadowSmall);
+}
+.iFrameArticle .iFrameLinkContainer .iFrameLink {
+  height: 3em;
+  width: 3em;
+  background-color: red;
+  border-radius: 50%;
+}
+.iFrameArticle #miki101 {
+  background-image: url(../../img/projects/miki101-screenprint.jpg);
+}
+.iFrameArticle #montmartre {
+  background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
+}
+
 footer {
   padding-bottom: 3.5rem;
 }
