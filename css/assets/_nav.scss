@@ -66,7 +66,11 @@
   }
 }
 .active {
-  color: var(--myBlue);
-  text-shadow: 0px 0px .5px var(--mint), 0px 0px 10px var(--white);
+  color: var(--white);
+  text-shadow: 0px 0px 10px var(--myBlue);
   transform: scale(1.1);
+  @include mQuery(s) {
+    color: var(--myBlue);
+    text-shadow: 0px 0px 10px var(--mint);
+  }
 }

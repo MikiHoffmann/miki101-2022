@@ -28,6 +28,9 @@ section {
   color: var(--white);
   div {
     padding-top: .4em;
+    @include mQuery(s) {
+      padding-top: 0;
+    }
     span {
       animation: fadeText 5s ease-in-out;
       animation-iteration-count: infinite;
@@ -55,12 +58,14 @@ section {
 @keyframes fadeText {
   0% {
     opacity: 1;
+    text-shadow: var(--blackShadowSmall);
   }
   50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+    text-shadow: var(--blackShadowSmall);
   }
 }
 .sectionArticle {
