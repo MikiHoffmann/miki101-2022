@@ -1519,11 +1519,51 @@ section {
   outline: 0.5px solid var(--white);
   box-shadow: var(--blackShadow), var(--blackShadowSmall);
 }
-.iFrameArticle .iFrameLinkContainer .iFrameLink {
+.iFrameArticle .iFrameLinkContainer span {
+  font-size: 1.3em;
+}
+@media only screen and (min-width: 31.25em) {
+  .iFrameArticle .iFrameLinkContainer span {
+    font-size: 1.6em;
+  }
+}
+.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink {
+  display: inline-block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 0.6em;
+}
+.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--mint);
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--blackShadowSmall), var(--whiteShadow);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button:hover {
+  background-color: var(--myBlue);
+  box-shadow: var(--mintShadow);
+}
+.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button img {
   height: 3em;
   width: 3em;
-  background-color: red;
-  border-radius: 50%;
 }
 .iFrameArticle #miki101 {
   background-image: url(../../img/projects/miki101-screenprint.jpg);
