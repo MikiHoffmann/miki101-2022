@@ -1521,6 +1521,7 @@ section {
 }
 .iFrameArticle .iFrameLinkContainer span {
   font-size: 1.3em;
+  text-shadow: var(--blackShadowSmall);
 }
 @media only screen and (min-width: 31.25em) {
   .iFrameArticle .iFrameLinkContainer span {
@@ -1528,10 +1529,11 @@ section {
   }
 }
 .iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  height: 3em;
 }
 .iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink {
   display: inline-block;

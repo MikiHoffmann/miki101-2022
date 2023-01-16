@@ -22,15 +22,17 @@
     box-shadow: var(--blackShadow), var(--blackShadowSmall);
     span {
       font-size: 1.3em;
+      text-shadow: var(--blackShadowSmall);
       @include mQuery(s) {
         font-size: 1.6em;
       }
     }
     .iFrameButtonLinkContainer {
-      display: flex;
+      display: inline-flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
+      height: 3em;
       .iFrameLink {
         display: inline-block;
         height: fit-content;
