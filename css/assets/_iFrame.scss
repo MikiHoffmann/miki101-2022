@@ -3,7 +3,7 @@
   padding-top: 1.7em;
   .iFrameLinkContainer {
     width: 100%;
-    aspect-ratio: 2/1.2;
+    aspect-ratio: 2/1.4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,7 +32,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
-      height: 3em;
+      max-height: 4em;
       .iFrameLink {
         display: inline-block;
         height: fit-content;
