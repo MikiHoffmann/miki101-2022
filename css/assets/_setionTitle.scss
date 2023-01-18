@@ -2,6 +2,7 @@
     position: relative;
     height: 4.1em;
     width: 100%;
+    margin-bottom: .5em;
     background: linear-gradient(90deg, var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--blackTrans) , var(--blackTrans), var(--mint), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue));
     background-size: 200%;
     animation: backgroundMove 8s ease-in-out;

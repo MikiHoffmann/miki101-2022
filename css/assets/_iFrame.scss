@@ -2,6 +2,7 @@
 .iFrameArticle {
   padding-top: 1.7em;
   display: flex;
+  flex-wrap: wrap;
   .iFrameLinkContainer {
     position: relative;
     width: 100%;
@@ -24,10 +25,11 @@
     box-shadow: var(--blackShadow), var(--blackShadowSmall);
     @include mQuery(s) {
         flex: 40%;
+        max-width: 50%;
     }
     span {
       font-size: 1.3em;
-      text-shadow: var(--blackShadowSmall);
+      text-shadow: var(--blackShadowSmall), var(--blackShadow);
       @include mQuery(s) {
         font-size: 1.6em;
       }
@@ -69,21 +71,56 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-image: url(../../img/projects/miki101CSS.jpg);
         background-color: var(--blackTrans);
+        background-blend-mode: multiply;
+        border-radius: 15px;
+        opacity: .5;
         z-index: -1;
+        animation: backGroundFade 6s ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    @keyframes backGroundFade {
+        0% {
+            opacity: .5;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: .5;
+        }
     }
   }
   #miki101 {
     background-image: url(../../img/projects/miki101-screenprint.jpg);
+    .background {
+        background-image: url(../../img/projects/miki101CSS.jpg);
+        animation-delay: 1.5s;
+    }
   }
   #montmartre {
     background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
+    .background {
+        background-image: url(../../img/projects/cafeMontmartreCSS.jpg);
+    }
     button {
         background-color: var(--white);
         &:hover {
             background-color: var(--blackTrans);
         }
+    }
+  }
+  #techgroundsProject {
+    .background {
+        background-image: url(../../img/projects/netflixCloneCSS.jpg);
+        animation-delay: 2.3s;
+    }
+  }
+  #mikisNepflix {
+    background-image: url(../../img/projects/mikiNepflix-screenshot.jpg);
+    .background {
+        background-image: url(../../img/projects/mikiNepflixCSS.jpg);
+        animation-delay: 1.8s;
     }
   }
 }

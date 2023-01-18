@@ -154,6 +154,7 @@ li {
   --myRed: rgb(230, 53, 53);
   --myBlue: rgb(49, 49, 248);
   --mint: rgb(157, 221, 157);
+  --mintTrans: rgba(157,221,157,0.3);
   --mainFont: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -1415,6 +1416,7 @@ section {
   position: relative;
   height: 4.1em;
   width: 100%;
+  margin-bottom: 0.5em;
   background: linear-gradient(90deg, var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--blackTrans), var(--mint), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue), var(--myBlue));
   background-size: 200%;
   -webkit-animation: backgroundMove 8s ease-in-out;
@@ -1499,6 +1501,7 @@ section {
 .iFrameArticle {
   padding-top: 1.7em;
   display: flex;
+  flex-wrap: wrap;
 }
 .iFrameArticle .iFrameLinkContainer {
   position: relative;
@@ -1524,11 +1527,12 @@ section {
 @media only screen and (min-width: 31.25em) {
   .iFrameArticle .iFrameLinkContainer {
     flex: 40%;
+    max-width: 50%;
   }
 }
 .iFrameArticle .iFrameLinkContainer span {
   font-size: 1.3em;
-  text-shadow: var(--blackShadowSmall);
+  text-shadow: var(--blackShadowSmall), var(--blackShadow);
 }
 @media only screen and (min-width: 31.25em) {
   .iFrameArticle .iFrameLinkContainer span {
@@ -1580,21 +1584,70 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../../img/projects/miki101CSS.jpg);
   background-color: var(--blackTrans);
+  background-blend-mode: multiply;
+  border-radius: 15px;
+  opacity: 0.5;
   z-index: -1;
+  -webkit-animation: backGroundFade 6s ease-in-out;
+          animation: backGroundFade 6s ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes backGroundFade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes backGroundFade {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 .iFrameArticle #miki101 {
   background-image: url(../../img/projects/miki101-screenprint.jpg);
 }
+.iFrameArticle #miki101 .background {
+  background-image: url(../../img/projects/miki101CSS.jpg);
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
 .iFrameArticle #montmartre {
   background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
+}
+.iFrameArticle #montmartre .background {
+  background-image: url(../../img/projects/cafeMontmartreCSS.jpg);
 }
 .iFrameArticle #montmartre button {
   background-color: var(--white);
 }
 .iFrameArticle #montmartre button:hover {
   background-color: var(--blackTrans);
+}
+.iFrameArticle #techgroundsProject .background {
+  background-image: url(../../img/projects/netflixCloneCSS.jpg);
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.iFrameArticle #mikisNepflix {
+  background-image: url(../../img/projects/mikiNepflix-screenshot.jpg);
+}
+.iFrameArticle #mikisNepflix .background {
+  background-image: url(../../img/projects/mikiNepflixCSS.jpg);
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 footer {
