@@ -1498,8 +1498,10 @@ section {
 
 .iFrameArticle {
   padding-top: 1.7em;
+  display: flex;
 }
 .iFrameArticle .iFrameLinkContainer {
+  position: relative;
   width: 100%;
   aspect-ratio: 2/1.4;
   display: flex;
@@ -1518,6 +1520,11 @@ section {
   border: 0.5px solid var(--mint);
   outline: 0.5px solid var(--white);
   box-shadow: var(--blackShadow), var(--blackShadowSmall);
+}
+@media only screen and (min-width: 31.25em) {
+  .iFrameArticle .iFrameLinkContainer {
+    flex: 40%;
+  }
 }
 .iFrameArticle .iFrameLinkContainer span {
   font-size: 1.3em;
@@ -1567,11 +1574,27 @@ section {
   height: 3em;
   width: 3em;
 }
+.iFrameArticle .iFrameLinkContainer .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../img/projects/miki101CSS.jpg);
+  background-color: var(--blackTrans);
+  z-index: -1;
+}
 .iFrameArticle #miki101 {
   background-image: url(../../img/projects/miki101-screenprint.jpg);
 }
 .iFrameArticle #montmartre {
   background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
+}
+.iFrameArticle #montmartre button {
+  background-color: var(--white);
+}
+.iFrameArticle #montmartre button:hover {
+  background-color: var(--blackTrans);
 }
 
 footer {
