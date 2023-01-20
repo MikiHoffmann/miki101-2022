@@ -1143,11 +1143,17 @@ section {
   min-height: 100vh;
   height: 100%;
   margin: 0 -2%;
+  padding-bottom: 0.6em;
   background-color: rgba(255, 255, 255, 0.6);
   font-size: 16.5vw;
   color: var(--white);
   text-align: center;
   word-break: break-all;
+}
+@media only screen and (min-width: 31.25em) {
+  .homeArticle {
+    justify-content: center;
+  }
 }
 .homeArticle div {
   padding-top: 0.4em;
@@ -1636,6 +1642,9 @@ section {
 .iFrameArticle #montmartre button:hover {
   background-color: var(--blackTrans);
 }
+.iFrameArticle #techgroundsProject {
+  background-image: url(../../img/projects/netflixClone-screenshot.jpg);
+}
 .iFrameArticle #techgroundsProject .background {
   background-image: url(../../img/projects/netflixCloneCSS.jpg);
   -webkit-animation-delay: 2.3s;
@@ -1648,6 +1657,20 @@ section {
   background-image: url(../../img/projects/mikiNepflixCSS.jpg);
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
+}
+.iFrameArticle #webshop {
+  background-image: url(../../img/projects/webshop-screenshot.jpg);
+}
+.iFrameArticle #webshop .background {
+  background-image: url(../../img/projects/webshop-js.jpg);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.iFrameArticle #mikiWebsitejQuery {
+  background-image: url(../../img/projects/mikiwebsite-jQuery-screenshot.jpg);
+}
+.iFrameArticle #mikiWebsitejQuery .background {
+  background-image: url(../../img/projects/mikiwebsite-jQuery.jpg);
 }
 
 footer {

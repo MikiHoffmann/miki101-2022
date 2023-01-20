@@ -111,6 +111,7 @@
     }
   }
   #techgroundsProject {
+    background-image: url(../../img/projects/netflixClone-screenshot.jpg);
     .background {
         background-image: url(../../img/projects/netflixCloneCSS.jpg);
         animation-delay: 2.3s;
@@ -121,6 +122,19 @@
     .background {
         background-image: url(../../img/projects/mikiNepflixCSS.jpg);
         animation-delay: 1.8s;
+    }
+  }
+  #webshop {
+    background-image: url(../../img/projects/webshop-screenshot.jpg);
+    .background {
+        background-image: url(../../img/projects/webshop-js.jpg);
+        animation-delay: .5s;
+    }
+  }
+  #mikiWebsitejQuery {
+    background-image: url(../../img/projects/mikiwebsite-jQuery-screenshot.jpg);
+    .background {
+        background-image: url(../../img/projects/mikiwebsite-jQuery.jpg);
     }
   }
 }
