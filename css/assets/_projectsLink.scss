@@ -1,9 +1,9 @@
 @import "./mixins";
-.iFrameArticle {
+.projectsArticle {
   padding-top: 1.7em;
   display: flex;
   flex-wrap: wrap;
-  .iFrameLinkContainer {
+  .projectsLinkContainer {
     position: relative;
     width: 100%;
     aspect-ratio: 2/1.4;
@@ -24,8 +24,8 @@
     outline: 0.5px solid var(--white);
     box-shadow: var(--blackShadow), var(--blackShadowSmall);
     @include mQuery(s) {
-        flex: 40%;
-        max-width: 50%;
+      flex: 40%;
+      max-width: 50%;
     }
     span {
       font-size: 1.3em;
@@ -34,13 +34,13 @@
         font-size: 1.6em;
       }
     }
-    .iFrameButtonLinkContainer {
+    .projectsButtonLinkContainer {
       display: inline-flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
       max-height: 4em;
-      .iFrameLink {
+      .projectsLink {
         display: inline-block;
         height: fit-content;
         width: fit-content;
@@ -52,7 +52,7 @@
           border: none;
           border-radius: 50%;
           box-shadow: var(--blackShadowSmall), var(--whiteShadow);
-          transition: .3s;
+          transition: 0.3s;
           cursor: pointer;
           &:hover {
             background-color: var(--myBlue);
@@ -65,76 +65,76 @@
         }
       }
     }
-    .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--blackTrans);
-        background-blend-mode: multiply;
-        border-radius: 15px;
-        opacity: .5;
-        z-index: -1;
-        animation: backGroundFade 6s ease-in-out;
-        animation-iteration-count: infinite;
+    .linkBackground {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--blackTrans);
+      background-blend-mode: multiply;
+      border-radius: 15px;
+      opacity: 0.5;
+      z-index: -1;
+      animation: backGroundFade 6s ease-in-out;
+      animation-iteration-count: infinite;
     }
     @keyframes backGroundFade {
-        0% {
-            opacity: .5;
-        }
-        50% {
-            opacity: 0;
-        }
-        100% {
-            opacity: .5;
-        }
+      0% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5;
+      }
     }
   }
   #miki101 {
     background-image: url(../../img/projects/miki101-screenprint.jpg);
-    .background {
-        background-image: url(../../img/projects/miki101CSS.jpg);
-        animation-delay: 1.5s;
+    .linkBackground {
+      background-image: url(../../img/projects/miki101CSS.jpg);
+      animation-delay: 1.5s;
     }
   }
   #montmartre {
     background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
-    .background {
-        background-image: url(../../img/projects/cafeMontmartreCSS.jpg);
+    .linkBackground {
+      background-image: url(../../img/projects/cafeMontmartreCSS.jpg);
     }
     button {
-        background-color: var(--white);
-        &:hover {
-            background-color: var(--blackTrans);
-        }
+      background-color: var(--white);
+      &:hover {
+        background-color: var(--blackTrans);
+      }
     }
   }
   #techgroundsProject {
     background-image: url(../../img/projects/netflixClone-screenshot.jpg);
-    .background {
-        background-image: url(../../img/projects/netflixCloneCSS.jpg);
-        animation-delay: 2.3s;
+    .linkBackground {
+      background-image: url(../../img/projects/netflixCloneCSS.jpg);
+      animation-delay: 2.3s;
     }
   }
   #mikisNepflix {
     background-image: url(../../img/projects/mikiNepflix-screenshot.jpg);
-    .background {
-        background-image: url(../../img/projects/mikiNepflixCSS.jpg);
-        animation-delay: 1.8s;
+    .linkBackground {
+      background-image: url(../../img/projects/mikiNepflixCSS.jpg);
+      animation-delay: 1.8s;
     }
   }
   #webshop {
     background-image: url(../../img/projects/webshop-screenshot.jpg);
-    .background {
-        background-image: url(../../img/projects/webshop-js.jpg);
-        animation-delay: .5s;
+    .linkBackground {
+      background-image: url(../../img/projects/webshop-js.jpg);
+      animation-delay: 0.5s;
     }
   }
   #mikiWebsitejQuery {
     background-image: url(../../img/projects/mikiwebsite-jQuery-screenshot.jpg);
-    .background {
-        background-image: url(../../img/projects/mikiwebsite-jQuery.jpg);
+    .linkBackground {
+      background-image: url(../../img/projects/mikiwebsite-jQuery.jpg);
     }
   }
 }

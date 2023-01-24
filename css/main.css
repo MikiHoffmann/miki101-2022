@@ -1504,12 +1504,48 @@ section {
   }
 }
 
-.iFrameArticle {
+.iFrameContainer {
+  display: block;
+  position: fixed;
+  top: -0.2em;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--white);
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2500;
+}
+
+.iFrameClose {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.iFrameClose img {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.iFrameProjects {
+  display: block;
+  position: relative;
+  height: 85%;
+  width: 100%;
+}
+
+.projectsArticle {
   padding-top: 1.7em;
   display: flex;
   flex-wrap: wrap;
 }
-.iFrameArticle .iFrameLinkContainer {
+.projectsArticle .projectsLinkContainer {
   position: relative;
   width: 100%;
   aspect-ratio: 2/1.4;
@@ -1531,28 +1567,28 @@ section {
   box-shadow: var(--blackShadow), var(--blackShadowSmall);
 }
 @media only screen and (min-width: 31.25em) {
-  .iFrameArticle .iFrameLinkContainer {
+  .projectsArticle .projectsLinkContainer {
     flex: 40%;
     max-width: 50%;
   }
 }
-.iFrameArticle .iFrameLinkContainer span {
+.projectsArticle .projectsLinkContainer span {
   font-size: 1.3em;
   text-shadow: var(--blackShadowSmall), var(--blackShadow);
 }
 @media only screen and (min-width: 31.25em) {
-  .iFrameArticle .iFrameLinkContainer span {
+  .projectsArticle .projectsLinkContainer span {
     font-size: 1.6em;
   }
 }
-.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer {
+.projectsArticle .projectsLinkContainer .projectsButtonLinkContainer {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   max-height: 4em;
 }
-.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink {
+.projectsArticle .projectsLinkContainer .projectsButtonLinkContainer .projectsLink {
   display: inline-block;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1562,7 +1598,7 @@ section {
   width: fit-content;
   margin-left: 0.6em;
 }
-.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button {
+.projectsArticle .projectsLinkContainer .projectsButtonLinkContainer .projectsLink button {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1576,15 +1612,15 @@ section {
   transition: 0.3s;
   cursor: pointer;
 }
-.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button:hover {
+.projectsArticle .projectsLinkContainer .projectsButtonLinkContainer .projectsLink button:hover {
   background-color: var(--myBlue);
   box-shadow: var(--mintShadow);
 }
-.iFrameArticle .iFrameLinkContainer .iFrameButtonLinkContainer .iFrameLink button img {
+.projectsArticle .projectsLinkContainer .projectsButtonLinkContainer .projectsLink button img {
   height: 3em;
   width: 3em;
 }
-.iFrameArticle .iFrameLinkContainer .background {
+.projectsArticle .projectsLinkContainer .linkBackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -1622,54 +1658,54 @@ section {
     opacity: 0.5;
   }
 }
-.iFrameArticle #miki101 {
+.projectsArticle #miki101 {
   background-image: url(../../img/projects/miki101-screenprint.jpg);
 }
-.iFrameArticle #miki101 .background {
+.projectsArticle #miki101 .linkBackground {
   background-image: url(../../img/projects/miki101CSS.jpg);
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
-.iFrameArticle #montmartre {
+.projectsArticle #montmartre {
   background-image: url(../../img/projects/cafeMontmartre-screenprint.jpg);
 }
-.iFrameArticle #montmartre .background {
+.projectsArticle #montmartre .linkBackground {
   background-image: url(../../img/projects/cafeMontmartreCSS.jpg);
 }
-.iFrameArticle #montmartre button {
+.projectsArticle #montmartre button {
   background-color: var(--white);
 }
-.iFrameArticle #montmartre button:hover {
+.projectsArticle #montmartre button:hover {
   background-color: var(--blackTrans);
 }
-.iFrameArticle #techgroundsProject {
+.projectsArticle #techgroundsProject {
   background-image: url(../../img/projects/netflixClone-screenshot.jpg);
 }
-.iFrameArticle #techgroundsProject .background {
+.projectsArticle #techgroundsProject .linkBackground {
   background-image: url(../../img/projects/netflixCloneCSS.jpg);
   -webkit-animation-delay: 2.3s;
           animation-delay: 2.3s;
 }
-.iFrameArticle #mikisNepflix {
+.projectsArticle #mikisNepflix {
   background-image: url(../../img/projects/mikiNepflix-screenshot.jpg);
 }
-.iFrameArticle #mikisNepflix .background {
+.projectsArticle #mikisNepflix .linkBackground {
   background-image: url(../../img/projects/mikiNepflixCSS.jpg);
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
 }
-.iFrameArticle #webshop {
+.projectsArticle #webshop {
   background-image: url(../../img/projects/webshop-screenshot.jpg);
 }
-.iFrameArticle #webshop .background {
+.projectsArticle #webshop .linkBackground {
   background-image: url(../../img/projects/webshop-js.jpg);
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-.iFrameArticle #mikiWebsitejQuery {
+.projectsArticle #mikiWebsitejQuery {
   background-image: url(../../img/projects/mikiwebsite-jQuery-screenshot.jpg);
 }
-.iFrameArticle #mikiWebsitejQuery .background {
+.projectsArticle #mikiWebsitejQuery .linkBackground {
   background-image: url(../../img/projects/mikiwebsite-jQuery.jpg);
 }
 

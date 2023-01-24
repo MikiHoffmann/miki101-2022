@@ -65,3 +65,8 @@ for (let i = 0; i < skillsIconsLanguage.length; i++) {
   iconLanguage[i].src = `img/icons/${skillsIconsLanguage[i].image}`
   iconLanguage[i].classList.add("jsScrollAnimation", "grow")
 }
+const iFrameLink = document.querySelector("#iFrameLink")
+const iFrameContainer = document.querySelector("#iFrameContainer")
+iFrameLink.addEventListener("click", () => {
+  iFrameContainer.style.height = 100%
+})

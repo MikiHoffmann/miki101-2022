@@ -1,0 +1,29 @@
+.iFrameContainer {
+    display: block;
+    position: fixed;
+    top: -.2em;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--white);
+    overflow: hidden;
+    transition: .5s;
+    z-index: 2500;
+}
+.iFrameClose {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    height: fit-content;
+    width: fit-content;
+    img {
+        height: 2.5em;
+        width: 2.5em;
+    }
+}
+.iFrameProjects {
+    display: block;
+    position: relative;
+    height: 85%;
+    width: 100%;
+}
