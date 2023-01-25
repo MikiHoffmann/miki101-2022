@@ -1519,10 +1519,10 @@ section {
 .iFrameContainer .iFrameButtonContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   height: 3.5em;
-  width: 100vw;
-  padding-left: 5%;
+  width: 100%;
+  padding: 0 5%;
   background-color: transparent;
 }
 .iFrameContainer .iFrameButtonContainer .iFrameClose {
