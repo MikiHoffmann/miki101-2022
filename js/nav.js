@@ -3,12 +3,19 @@ window.scrollTo(top)
 const iFrameLink = document.querySelector("#iFrameLink")
 const iFrameContainer = document.querySelector("#iFrameContainer")
 iFrameContainer.style.height = "0"
+const iFrameCloseBeam = document.querySelectorAll(".iFrameCloseBeam")
 iFrameLink.addEventListener("click", () => {
   iFrameContainer.style.height = "100%"
+  iFrameCloseBeam.forEach((beam) => {
+    beam.classList.add("iFrameCloseBeamColor")
+  })
 })
 const iFrameClose = document.querySelector("#iFrameClose")
 iFrameClose.addEventListener("click", () => {
   iFrameContainer.style.height = "0"
+  iFrameCloseBeam.forEach((beam) => {
+    beam.classList.remove("iFrameCloseBeamColor")
+  })
 })
 const menuButton = document.getElementById("menuButton")
 menuButton.addEventListener("click", toggleOverlay)

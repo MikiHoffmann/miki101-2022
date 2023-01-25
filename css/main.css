@@ -1513,7 +1513,7 @@ section {
   width: 100%;
   background-color: var(--white);
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.6s;
   z-index: 2050;
 }
 .iFrameContainer .iFrameButtonContainer {
@@ -1534,20 +1534,23 @@ section {
   cursor: pointer;
   z-index: 2060;
 }
-.iFrameContainer .iFrameButtonContainer .iFrameClose div {
+.iFrameContainer .iFrameButtonContainer .iFrameClose .iFrameCloseBeam {
   position: absolute;
   top: 0.8em;
   left: 0;
   height: 0.125em;
   width: 2.5em;
-  background-color: var(--myBlue);
-  box-shadow: var(--blackShadowSmall);
+  transition: 0.4s;
 }
 .iFrameContainer .iFrameButtonContainer .iFrameClose div:nth-of-type(1) {
   transform: rotate(135deg);
 }
 .iFrameContainer .iFrameButtonContainer .iFrameClose div:nth-of-type(2) {
   transform: rotate(-135deg);
+}
+.iFrameContainer .iFrameButtonContainer .iFrameClose .iFrameCloseBeamColor {
+  background-color: var(--myBlue);
+  box-shadow: var(--blackShadowSmall);
 }
 .iFrameContainer .iFrameProjects {
   display: block;
