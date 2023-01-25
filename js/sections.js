@@ -1,4 +1,3 @@
-// helper for HTML elements creation
 const createChildElement = (parentElement, element, className) => {
   const childElement = document.createElement(element)
   parentElement.appendChild(childElement)
