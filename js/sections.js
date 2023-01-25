@@ -70,3 +70,7 @@ const iFrameContainer = document.querySelector("#iFrameContainer")
 iFrameLink.addEventListener("click", () => {
   iFrameContainer.style.height = "100%"
 })
+const iFrameClose = document.querySelector("#iFrameClose")
+iFrameClose.addEventListener("click", () => {
+  iFrameContainer.style.height = "0"
+})

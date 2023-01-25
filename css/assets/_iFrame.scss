@@ -5,17 +5,18 @@
     left: 0;
     height: 0;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--white);
     overflow: hidden;
     transition: .5s;
     z-index: 2050;
 }
 .iFrameClose {
     position: absolute;
-    top: .5em;
-    left: .5em;
+    top: .8em;
+    left: .8em;
     height: fit-content;
     width: fit-content;
+    cursor: pointer;
     z-index: 2060;
     img {
         height: 2.5em;
@@ -25,7 +26,11 @@
 .iFrameProjects {
     display: block;
     position: absolute;
-    top: 5em;
+    top: 4em;
     height: 85%;
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
+    border: 1.5px solid var(--white);
+    border-radius: 10px;
+    box-shadow: var(--blackShadow), var(--blackShadowSmall);
 }
