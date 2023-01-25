@@ -1,5 +1,15 @@
 window.scrollTo(top)
 
+const iFrameLink = document.querySelector("#iFrameLink")
+const iFrameContainer = document.querySelector("#iFrameContainer")
+iFrameContainer.style.height = "0"
+iFrameLink.addEventListener("click", () => {
+  iFrameContainer.style.height = "100%"
+})
+const iFrameClose = document.querySelector("#iFrameClose")
+iFrameClose.addEventListener("click", () => {
+  iFrameContainer.style.height = "0"
+})
 const menuButton = document.getElementById("menuButton")
 menuButton.addEventListener("click", toggleOverlay)
 

@@ -1507,7 +1507,7 @@ section {
 .iFrameContainer {
   display: block;
   position: fixed;
-  top: 0;
+  top: -0.1em;
   left: 0;
   height: 0;
   width: 100%;
@@ -1516,26 +1516,40 @@ section {
   transition: 0.5s;
   z-index: 2050;
 }
-
-.iFrameClose {
+.iFrameContainer .iFrameButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3.5em;
+  width: 100vw;
+  padding-left: 5%;
+  background-color: transparent;
+}
+.iFrameContainer .iFrameButtonContainer .iFrameClose {
   position: absolute;
-  top: 0.8em;
-  left: 0.8em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 2em;
+  width: 2.3em;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   z-index: 2060;
 }
-.iFrameClose img {
-  height: 2.5em;
+.iFrameContainer .iFrameButtonContainer .iFrameClose div {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  height: 0.125em;
   width: 2.5em;
+  background-color: var(--myBlue);
+  box-shadow: var(--blackShadowSmall);
 }
-
-.iFrameProjects {
+.iFrameContainer .iFrameButtonContainer .iFrameClose div:nth-of-type(1) {
+  transform: rotate(135deg);
+}
+.iFrameContainer .iFrameButtonContainer .iFrameClose div:nth-of-type(2) {
+  transform: rotate(-135deg);
+}
+.iFrameContainer .iFrameProjects {
   display: block;
   position: absolute;
   top: 4em;
