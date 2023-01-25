@@ -68,5 +68,5 @@ for (let i = 0; i < skillsIconsLanguage.length; i++) {
 const iFrameLink = document.querySelector("#iFrameLink")
 const iFrameContainer = document.querySelector("#iFrameContainer")
 iFrameLink.addEventListener("click", () => {
-  iFrameContainer.style.height = 100%
+  iFrameContainer.style.height = "100%"
 })
