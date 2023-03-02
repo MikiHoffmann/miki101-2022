@@ -153,6 +153,9 @@ section {
     outline: 1px solid var(--black);
     box-shadow: var(--blackShadow), var(--blackShadowSmall);
     opacity: 0;
+    @include mQuery(m) {
+      width: 65%;
+    }
   }
 }
 .linkIconContainer {
@@ -160,9 +163,6 @@ section {
   align-items: center;
   justify-content: center;
   margin: 1.5em 0;
-  @include mQuery(m) {
-    justify-content: flex-start;
-  }
   a {
     height: fit-content;
     width: fit-content;
@@ -175,9 +175,18 @@ section {
       box-shadow: var(--blackShadowSmall), var(--mintShadow);
     }
     img {
-      height: 5em;
+      height: 3em;
       width: auto;
     }
+  }
+}
+.downloadContainer {
+  width: 100%;
+  padding-top: 4em;
+  text-align: center;
+  .downloadLink {
+    display: inline-block;
+    margin-left: .5em;
   }
 }
 .responsiveParagraph {
